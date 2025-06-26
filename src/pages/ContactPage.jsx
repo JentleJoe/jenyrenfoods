@@ -10,9 +10,9 @@ const ContactPage = () => {
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: 'Call Us',
-      content: '+2349164778395',
-      subContent: 'Available during business hours'
+      title: 'Call or WhatsApp',
+      content: '+234 916 477 8395 | +234 708 247 4369',
+      subContent: 'Available on calls and WhatsApp during business hours'
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -202,8 +202,11 @@ const ContactPage = () => {
                   <p className="text-gray-600">Tom Adigwe Street Off DLA Road, Asaba, Delta State</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-                  <p className="text-gray-600">+2349164778395</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Phone / WhatsApp</h3>
+                  <div className="text-gray-600">
+                    <p>+234 916 477 8395</p>
+                    <p>+234 708 247 4369</p>
+                  </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Hours</h3>

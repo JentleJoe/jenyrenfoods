@@ -170,14 +170,18 @@ const ChinChinPage = () => {
                   </div>
                   
                   <div className="space-y-4">
-                    <button className="w-full btn-primary text-lg py-4">
+                    <a href="tel:+2349164778395" className="w-full btn-primary text-lg py-4 inline-flex items-center justify-center">
                       <Phone className="w-5 h-5 mr-2" />
-                      Call to Order: +2349164778395
-                    </button>
-                    <button className="w-full btn-secondary text-lg py-4">
+                      Call: +234 916 477 8395
+                    </a>
+                    <a href="tel:+2347082474369" className="w-full btn-secondary text-lg py-4 inline-flex items-center justify-center">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Call: +234 708 247 4369
+                    </a>
+                    <a href="mailto:jennykingsglobal2022@gmail.com" className="w-full btn-secondary text-lg py-4 inline-flex items-center justify-center">
                       <Mail className="w-5 h-5 mr-2" />
                       Email Us for Bulk Orders
-                    </button>
+                    </a>
                   </div>
                 </div>
                 
@@ -296,14 +300,18 @@ const ChinChinPage = () => {
               high-quality African snacks delivered fresh to your door.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-secondary-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center">
+              <a href="tel:+2349164778395" className="bg-white text-secondary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: +2349164778395
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary-600 transition-colors inline-flex items-center">
+                Call: +234 916 477 8395
+              </a>
+              <a href="tel:+2347082474369" className="bg-white text-secondary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center">
+                <Phone className="w-5 h-5 mr-2" />
+                Call: +234 708 247 4369
+              </a>
+              <a href="mailto:jennykingsglobal2022@gmail.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary-600 transition-colors inline-flex items-center justify-center">
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
-              </button>
+              </a>
             </div>
           </div>
         </div>

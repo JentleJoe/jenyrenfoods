@@ -17,10 +17,10 @@ const ComingSoonPage = ({ productName, productDescription, estimatedDate = "Q2 2
             </Link>
           </div>
 
-          {/* Coming Soon Badge */}
+          {/* Available Soon Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-accent-100 rounded-full text-accent-800 font-medium mb-6">
             <Clock className="w-4 h-4 mr-2" />
-            Coming Soon
+            Available Soon
           </div>
 
           {/* Product Name */}
@@ -38,12 +38,12 @@ const ComingSoonPage = ({ productName, productDescription, estimatedDate = "Q2 2
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-center md:text-left">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Currently in Development
+                  Currently in Production
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We&apos;re working hard to bring you this premium product. Our team is 
-                  perfecting the recipe and sourcing the finest ingredients to ensure 
-                  exceptional quality.
+                  We&apos;re carefully preparing this premium product for you. Our team is 
+                  perfecting the processing methods and sourcing the finest ingredients to ensure 
+                  exceptional quality and freshness.
                 </p>
                 <div className="text-secondary-600 font-medium">
                   Expected Launch: {estimatedDate}
@@ -65,15 +65,21 @@ const ComingSoonPage = ({ productName, productDescription, estimatedDate = "Q2 2
               <h3 className="text-xl font-semibold">Get Notified When Available</h3>
             </div>
             <p className="mb-6 opacity-90">
-              Be the first to know when {productName} becomes available. 
-              Contact us to join our waiting list!
+              Be the first to know when {productName} is ready for purchase. 
+              Contact us to join our priority notification list!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+2349164778395"
                 className="bg-white text-secondary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center"
               >
-                Call: +2349164778395
+                Call: +234 916 477 8395
+              </a>
+              <a 
+                href="tel:+2347082474369"
+                className="bg-white text-secondary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center"
+              >
+                Call: +234 708 247 4369
               </a>
               <a 
                 href="mailto:jennykingsglobal2022@gmail.com"
