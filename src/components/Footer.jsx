@@ -95,20 +95,20 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-secondary-400 flex-shrink-0" />
                 <span className="text-gray-300">
-                  123 Market Street, Lagos, Nigeria
+                  Tom Adigwe Street Off DLA Road, Asaba, Delta State
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary-400 flex-shrink-0" />
-                <span className="text-gray-300">+234 (0) 123 456 789</span>
+                <span className="text-gray-300">+2349164778395</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary-400 flex-shrink-0" />
                 <a
-                  href="mailto:info@jenyrenfoods.com"
+                  href="mailto:jennykingsglobal2022@gmail.com"
                   className="text-gray-300 hover:text-secondary-400 transition-colors"
                 >
-                  info@jenyrenfoods.com
+                  jennykingsglobal2022@gmail.com
                 </a>
               </div>
             </div>

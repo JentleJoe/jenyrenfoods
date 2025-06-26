@@ -5,26 +5,26 @@ const ContactPage = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Visit Our Office',
-      content: '123 Food Street, Nutrition City, NC 12345',
-      subContent: 'Monday - Friday: 9:00 AM - 6:00 PM'
+      content: 'Tom Adigwe Street Off DLA Road, Asaba, Delta State',
+      subContent: 'Monday - Saturday: 9:00 AM - 7:00 PM'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      subContent: 'Available 24/7 for customer support'
+      content: '+2349164778395',
+      subContent: 'Available during business hours'
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email Us',
-      content: 'info@jenyrenfoods.com',
+      content: 'jennykingsglobal2022@gmail.com',
       subContent: 'We respond within 24 hours'
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Business Hours',
-      content: 'Mon - Fri: 9:00 AM - 6:00 PM',
-      subContent: 'Sat: 10:00 AM - 4:00 PM'
+      content: 'Mon - Sat: 9:00 AM - 7:00 PM',
+      subContent: 'Sunday: Closed'
     }
   ];
 
