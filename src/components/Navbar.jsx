@@ -39,25 +39,27 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-secondary-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-xl">J</span>
             </div>
-            <Link to="/" className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-secondary-800' : 'text-white'
+            <Link to="/" className={`text-2xl font-bold transition-all duration-300 ${
+              isScrolled 
+                ? 'text-secondary-800' 
+                : 'text-gray-800'
             }`}>Jenyrenfoods</Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className={`font-medium transition-colors duration-300 ${
+            <Link to="/" className={`font-medium transition-all duration-300 ${
               isScrolled 
                 ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-white hover:text-secondary-200'
+                : 'text-gray-800 hover:text-secondary-600'
             } ${location.pathname === '/' ? 'text-secondary-600' : ''}`}>
               Home
             </Link>
             
-            <Link to="/pricing" className={`font-medium transition-colors duration-300 ${
+            <Link to="/pricing" className={`font-medium transition-all duration-300 ${
               isScrolled 
                 ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-white hover:text-secondary-200'
+                : 'text-gray-800 hover:text-secondary-600'
             } ${location.pathname === '/pricing' ? 'text-secondary-600' : ''}`}>
               Pricing
             </Link>
@@ -65,10 +67,10 @@ const Navbar = () => {
             {/* Products Dropdown */}
             <div className="relative">
               <button
-                className={`flex items-center space-x-1 font-medium transition-colors duration-300 ${
+                className={`flex items-center space-x-1 font-medium transition-all duration-300 ${
                   isScrolled 
                     ? 'text-gray-700 hover:text-secondary-600' 
-                    : 'text-white hover:text-secondary-200'
+                    : 'text-gray-800 hover:text-secondary-600'
                 } ${location.pathname === '/products' ? 'text-secondary-600' : ''}`}
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
               >
@@ -100,10 +102,10 @@ const Navbar = () => {
               )}
             </div>
             
-            <Link to="/contact" className={`font-medium transition-colors duration-300 ${
+            <Link to="/contact" className={`font-medium transition-all duration-300 ${
               isScrolled 
                 ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-white hover:text-secondary-200'
+                : 'text-gray-800 hover:text-secondary-600'
             } ${location.pathname === '/contact' ? 'text-secondary-600' : ''}`}>
               Contact
             </Link>
@@ -115,12 +117,16 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X className={`w-6 h-6 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+              <X className={`w-6 h-6 transition-all duration-300 ${
+                isScrolled 
+                  ? 'text-gray-900' 
+                  : 'text-gray-800'
               }`} />
             ) : (
-              <Menu className={`w-6 h-6 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+              <Menu className={`w-6 h-6 transition-all duration-300 ${
+                isScrolled 
+                  ? 'text-gray-900' 
+                  : 'text-gray-800'
               }`} />
             )}
           </button>
@@ -129,10 +135,12 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className={`md:hidden border-t py-4 ${
-            isScrolled ? 'border-gray-200 bg-white' : 'border-white/20 bg-white/95 backdrop-blur-md'
+            isScrolled 
+              ? 'border-gray-200 bg-white' 
+              : 'border-white/30 bg-white/95 backdrop-blur-md shadow-lg'
           }`}>
             <div className="flex flex-col space-y-4 px-4">
-              <Link to="/" className={`font-medium transition-colors ${
+              <Link to="/" className={`font-medium transition-all duration-300 ${
                 isScrolled 
                   ? 'text-gray-700 hover:text-secondary-600' 
                   : 'text-gray-800 hover:text-secondary-600'
@@ -141,7 +149,7 @@ const Navbar = () => {
                 Home
               </Link>
               
-              <Link to="/pricing" className={`font-medium transition-colors ${
+              <Link to="/pricing" className={`font-medium transition-all duration-300 ${
                 isScrolled 
                   ? 'text-gray-700 hover:text-secondary-600' 
                   : 'text-gray-800 hover:text-secondary-600'
@@ -152,7 +160,7 @@ const Navbar = () => {
               
               <div>
                 <button
-                  className={`flex items-center justify-between w-full font-medium transition-colors ${
+                  className={`flex items-center justify-between w-full font-medium transition-all duration-300 ${
                     isScrolled 
                       ? 'text-gray-700 hover:text-secondary-600' 
                       : 'text-gray-800 hover:text-secondary-600'
@@ -167,10 +175,10 @@ const Navbar = () => {
                   <div className="mt-2 ml-4 space-y-2">
                     <Link
                       to="/products"
-                      className={`block transition-colors font-medium ${
+                      className={`block transition-all duration-300 font-medium ${
                         isScrolled 
                           ? 'text-gray-600 hover:text-secondary-600' 
-                          : 'text-gray-700 hover:text-secondary-600'
+                          : 'text-gray-600 hover:text-secondary-600'
                       }`}
                       onClick={() => {
                         setIsProductsOpen(false);
@@ -183,10 +191,10 @@ const Navbar = () => {
                       <Link
                         key={product.name}
                         to={product.href}
-                        className={`block transition-colors ${
+                        className={`block transition-all duration-300 ${
                           isScrolled 
                             ? 'text-gray-600 hover:text-secondary-600' 
-                            : 'text-gray-700 hover:text-secondary-600'
+                            : 'text-gray-600 hover:text-secondary-600'
                         }`}
                         onClick={() => {
                           setIsProductsOpen(false);
@@ -200,7 +208,7 @@ const Navbar = () => {
                 )}
               </div>
               
-              <Link to="/contact" className={`font-medium transition-colors ${
+              <Link to="/contact" className={`font-medium transition-all duration-300 ${
                 isScrolled 
                   ? 'text-gray-700 hover:text-secondary-600' 
                   : 'text-gray-800 hover:text-secondary-600'

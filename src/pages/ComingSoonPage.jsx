@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const ComingSoonPage = ({ productName, productDescription, estimatedDate = "Q2 2025" }) => {
   return (
     <div className="pt-20 min-h-screen bg-gradient-to-br from-secondary-50 to-earth-50">
-      <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center py-16">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center py-8 md:py-16">
           {/* Back Link */}
           <div className="mb-8">
             <Link 

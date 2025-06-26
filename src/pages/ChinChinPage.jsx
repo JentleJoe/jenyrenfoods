@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Star, Heart, Truck, Shield, Award, ChefHat, Package, Phone, Mail, ArrowRight, Check, Clock, Leaf } from 'lucide-react';
+import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf } from 'lucide-react';
 
 const ChinChinPage = () => {
   const [selectedSize, setSelectedSize] = useState('500g');
@@ -63,8 +63,8 @@ const ChinChinPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-16">
-        <div className="container-custom">
+      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-8 md:py-16">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-accent-100 rounded-full text-accent-800 font-medium mb-6">
@@ -115,7 +115,7 @@ const ChinChinPage = () => {
 
       {/* Product Ordering Section */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-secondary-50 to-earth-50 rounded-3xl p-8 md:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -223,7 +223,7 @@ const ChinChinPage = () => {
 
       {/* How It&apos;s Made Section */}
       <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Crafted with <span className="text-gradient">Tradition</span>
@@ -250,7 +250,7 @@ const ChinChinPage = () => {
 
       {/* Ingredients Section */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -286,7 +286,7 @@ const ChinChinPage = () => {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-secondary-600 to-earth-600 text-white">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Experience Premium ChinChin?

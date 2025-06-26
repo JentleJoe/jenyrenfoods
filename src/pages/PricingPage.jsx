@@ -65,8 +65,8 @@ const PricingPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-16">
-        <div className="container-custom">
+      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-8 md:py-16">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Simple, Transparent <span className="text-gradient">Pricing</span>
@@ -81,7 +81,7 @@ const PricingPage = () => {
 
       {/* Pricing Plans */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan) => (
               <div
@@ -137,7 +137,7 @@ const PricingPage = () => {
 
       {/* Individual Product Pricing */}
       <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Individual Product Pricing
@@ -173,7 +173,7 @@ const PricingPage = () => {
 
       {/* FAQ Section */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
@@ -206,7 +206,7 @@ const PricingPage = () => {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-secondary-50 to-earth-50">
-        <div className="container-custom">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ready to Place Your Order?
