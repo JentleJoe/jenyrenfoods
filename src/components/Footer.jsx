@@ -39,19 +39,19 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-brown-gradient text-cream-100">
       <div className="container-custom px-6 sm:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-secondary-600 rounded-full flex items-center justify-center">
-                <Wheat className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-honey-gradient rounded-full flex items-center justify-center shadow-lg">
+                <Wheat className="w-6 h-6 text-brown-800" />
               </div>
-              <span className="text-2xl font-bold">Jenyrenfoods</span>
+              <span className="text-2xl font-bold text-cream-50">Jenyrenfoods</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-cream-200 mb-6 leading-relaxed">
               Premium African food products crafted with tradition and care. 
               Bringing authentic flavors to your table since 2010.
             </p>
@@ -62,10 +62,10 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary-600 transition-colors"
+                  className="w-10 h-10 bg-brown-600 rounded-full flex items-center justify-center hover:bg-honey-600 transition-colors shadow-md"
                   aria-label={social.name}
                 >
-                  {social.icon}
+                  <span className="text-cream-100">{social.icon}</span>
                 </a>
               ))}
             </div>
@@ -73,13 +73,13 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Our Products</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cream-50">Our Products</h3>
             <ul className="space-y-3">
               {products.map((product) => (
                 <li key={product.name}>
                   <Link
                     to={product.href}
-                    className="text-gray-300 hover:text-secondary-400 transition-colors"
+                    className="text-cream-200 hover:text-honey-300 transition-colors"
                   >
                     {product.name}
                   </Link>
@@ -90,13 +90,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cream-50">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-secondary-400 transition-colors"
+                    className="text-cream-200 hover:text-honey-300 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -107,11 +107,11 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Get in Touch</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cream-50">Get in Touch</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-secondary-400 flex-shrink-0" />
-                <span className="text-gray-300">
+                <MapPin className="w-5 h-5 text-honey-400 flex-shrink-0" />
+                <span className="text-cream-200">
                   Tom Adigwe Street Off DLA Road, Asaba, Delta State
                 </span>
               </div>
@@ -119,10 +119,10 @@ const Footer = () => {
               {/* Phone Numbers */}
               <div className="space-y-2">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-secondary-400 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-honey-400 flex-shrink-0" />
                   <div className="flex flex-col space-y-1">
                     <div className="flex items-center space-x-2">
-                      <a href="tel:+2349164778395" className="text-gray-300 hover:text-secondary-400 transition-colors">
+                      <a href="tel:+2349164778395" className="text-cream-200 hover:text-honey-300 transition-colors">
                         +234 916 477 8395
                       </a>
                       <a 
@@ -136,7 +136,7 @@ const Footer = () => {
                       </a>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <a href="tel:+2347082474369" className="text-gray-300 hover:text-secondary-400 transition-colors">
+                      <a href="tel:+2347082474369" className="text-cream-200 hover:text-honey-300 transition-colors">
                         +234 708 247 4369
                       </a>
                       <a 
@@ -154,10 +154,10 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-secondary-400 flex-shrink-0" />
+                <Mail className="w-5 h-5 text-honey-400 flex-shrink-0" />
                 <a
                   href="mailto:jennykingsglobal2022@gmail.com"
-                  className="text-gray-300 hover:text-secondary-400 transition-colors"
+                  className="text-cream-200 hover:text-honey-300 transition-colors"
                 >
                   jennykingsglobal2022@gmail.com
                 </a>
@@ -167,19 +167,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 py-6">
+        <div className="border-t border-brown-600 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-cream-300 text-sm">
               © 2024 Jenyrenfoods. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-secondary-400 text-sm transition-colors">
+              <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-secondary-400 text-sm transition-colors">
+              <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-secondary-400 text-sm transition-colors">
+              <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
                 Cookie Policy
               </a>
             </div>

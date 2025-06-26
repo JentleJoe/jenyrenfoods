@@ -12,20 +12,22 @@
   body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
+    background-color: #F8F5F0; /* Warm cream background */
+    color: #3D2F1F; /* Rich brown text */
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-secondary-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary-700 hover:shadow-lg transform hover:-translate-y-1;
+    @apply bg-honey-500 text-brown-800 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-honey-600 hover:shadow-lg transform hover:-translate-y-1 border-2 border-honey-500 hover:border-honey-600;
   }
   
   .btn-secondary {
-    @apply bg-white text-secondary-700 border-2 border-secondary-600 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary-50 hover:shadow-lg transform hover:-translate-y-1;
+    @apply bg-cream-100 text-brown-600 border-2 border-brown-400 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-cream-200 hover:border-brown-500 hover:shadow-lg transform hover:-translate-y-1;
   }
   
   .card {
-    @apply bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+    @apply bg-cream-50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-cream-300;
   }
   
   .section-padding {
@@ -37,7 +39,23 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-secondary-600 to-secondary-800 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-honey-600 to-honey-800 bg-clip-text text-transparent;
+  }
+  
+  .text-brown-gradient {
+    @apply bg-gradient-to-r from-brown-600 to-brown-800 bg-clip-text text-transparent;
+  }
+  
+  .bg-warm-gradient {
+    @apply bg-gradient-to-br from-cream-100 to-cream-200;
+  }
+  
+  .bg-honey-gradient {
+    @apply bg-gradient-to-r from-honey-500 to-honey-600;
+  }
+  
+  .bg-brown-gradient {
+    @apply bg-gradient-to-br from-brown-700 to-brown-800;
   }
 }
 

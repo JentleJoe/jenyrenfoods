@@ -29,20 +29,20 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white shadow-md' 
+        ? 'bg-cream-50 shadow-lg border-b border-cream-300' 
         : 'bg-transparent'
     }`}>
       <div className="container-custom px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-secondary-600 rounded-full flex items-center justify-center">
-              <Wheat className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-honey-gradient rounded-full flex items-center justify-center shadow-md">
+              <Wheat className="w-6 h-6 text-brown-800" />
             </div>
             <Link to="/" className={`text-2xl font-bold transition-all duration-300 ${
               isScrolled 
-                ? 'text-secondary-800' 
-                : 'text-gray-800'
+                ? 'text-brown-700' 
+                : 'text-brown-800'
             }`}>Jenyrenfoods</Link>
           </div>
 
@@ -50,17 +50,17 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className={`font-medium transition-all duration-300 ${
               isScrolled 
-                ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-gray-800 hover:text-secondary-600'
-            } ${location.pathname === '/' ? 'text-secondary-600' : ''}`}>
+                ? 'text-brown-600 hover:text-honey-600' 
+                : 'text-brown-700 hover:text-honey-600'
+            } ${location.pathname === '/' ? 'text-honey-600' : ''}`}>
               Home
             </Link>
             
             <Link to="/pricing" className={`font-medium transition-all duration-300 ${
               isScrolled 
-                ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-gray-800 hover:text-secondary-600'
-            } ${location.pathname === '/pricing' ? 'text-secondary-600' : ''}`}>
+                ? 'text-brown-600 hover:text-honey-600' 
+                : 'text-brown-700 hover:text-honey-600'
+            } ${location.pathname === '/pricing' ? 'text-honey-600' : ''}`}>
               Pricing
             </Link>
             
@@ -69,9 +69,9 @@ const Navbar = () => {
               <button
                 className={`flex items-center space-x-1 font-medium transition-all duration-300 ${
                   isScrolled 
-                    ? 'text-gray-700 hover:text-secondary-600' 
-                    : 'text-gray-800 hover:text-secondary-600'
-                } ${location.pathname === '/products' ? 'text-secondary-600' : ''}`}
+                    ? 'text-brown-600 hover:text-honey-600' 
+                    : 'text-brown-700 hover:text-honey-600'
+                } ${location.pathname === '/products' ? 'text-honey-600' : ''}`}
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
               >
                 <span>Products</span>
@@ -79,20 +79,20 @@ const Navbar = () => {
               </button>
               
               {isProductsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-cream-50 rounded-lg shadow-lg border border-cream-300 py-2">
                   <Link
                     to="/products"
-                    className="block px-4 py-2 text-gray-700 hover:bg-secondary-50 hover:text-secondary-600 transition-colors font-medium"
+                    className="block px-4 py-2 text-brown-700 hover:bg-honey-100 hover:text-brown-800 transition-colors font-medium"
                     onClick={() => setIsProductsOpen(false)}
                   >
                     All Products
                   </Link>
-                  <div className="border-t border-gray-100 my-1"></div>
+                  <div className="border-t border-cream-300 my-1"></div>
                   {products.map((product) => (
                     <Link
                       key={product.name}
                       to={product.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-secondary-50 hover:text-secondary-600 transition-colors"
+                      className="block px-4 py-2 text-brown-600 hover:bg-honey-100 hover:text-brown-800 transition-colors"
                       onClick={() => setIsProductsOpen(false)}
                     >
                       {product.name}
@@ -104,9 +104,9 @@ const Navbar = () => {
             
             <Link to="/contact" className={`font-medium transition-all duration-300 ${
               isScrolled 
-                ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-gray-800 hover:text-secondary-600'
-            } ${location.pathname === '/contact' ? 'text-secondary-600' : ''}`}>
+                ? 'text-brown-600 hover:text-honey-600' 
+                : 'text-brown-700 hover:text-honey-600'
+            } ${location.pathname === '/contact' ? 'text-honey-600' : ''}`}>
               Contact
             </Link>
           </div>
@@ -119,14 +119,14 @@ const Navbar = () => {
             {isOpen ? (
               <X className={`w-6 h-6 transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-gray-900' 
-                  : 'text-gray-800'
+                  ? 'text-brown-800' 
+                  : 'text-brown-700'
               }`} />
             ) : (
               <Menu className={`w-6 h-6 transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-gray-900' 
-                  : 'text-gray-800'
+                  ? 'text-brown-800' 
+                  : 'text-brown-700'
               }`} />
             )}
           </button>
@@ -136,24 +136,24 @@ const Navbar = () => {
         {isOpen && (
           <div className={`md:hidden border-t py-4 ${
             isScrolled 
-              ? 'border-gray-200 bg-white' 
-              : 'border-white/30 bg-white/95 backdrop-blur-md shadow-lg'
+              ? 'border-cream-300 bg-cream-50' 
+              : 'border-cream-300/50 bg-cream-50/95 backdrop-blur-md shadow-lg'
           }`}>
             <div className="flex flex-col space-y-4 px-4">
               <Link to="/" className={`font-medium transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-gray-700 hover:text-secondary-600' 
-                  : 'text-gray-800 hover:text-secondary-600'
-              } ${location.pathname === '/' ? 'text-secondary-600' : ''}`}
+                  ? 'text-brown-600 hover:text-honey-600' 
+                  : 'text-brown-700 hover:text-honey-600'
+              } ${location.pathname === '/' ? 'text-honey-600' : ''}`}
               onClick={() => setIsOpen(false)}>
                 Home
               </Link>
               
               <Link to="/pricing" className={`font-medium transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-gray-700 hover:text-secondary-600' 
-                  : 'text-gray-800 hover:text-secondary-600'
-              } ${location.pathname === '/pricing' ? 'text-secondary-600' : ''}`}
+                  ? 'text-brown-600 hover:text-honey-600' 
+                  : 'text-brown-700 hover:text-honey-600'
+              } ${location.pathname === '/pricing' ? 'text-honey-600' : ''}`}
               onClick={() => setIsOpen(false)}>
                 Pricing
               </Link>
@@ -162,9 +162,9 @@ const Navbar = () => {
                 <button
                   className={`flex items-center justify-between w-full font-medium transition-all duration-300 ${
                     isScrolled 
-                      ? 'text-gray-700 hover:text-secondary-600' 
-                      : 'text-gray-800 hover:text-secondary-600'
-                  } ${location.pathname === '/products' ? 'text-secondary-600' : ''}`}
+                      ? 'text-brown-600 hover:text-honey-600' 
+                      : 'text-brown-700 hover:text-honey-600'
+                  } ${location.pathname === '/products' ? 'text-honey-600' : ''}`}
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
                 >
                   <span>Products</span>
@@ -177,8 +177,8 @@ const Navbar = () => {
                       to="/products"
                       className={`block transition-all duration-300 font-medium ${
                         isScrolled 
-                          ? 'text-gray-600 hover:text-secondary-600' 
-                          : 'text-gray-600 hover:text-secondary-600'
+                          ? 'text-brown-500 hover:text-honey-600' 
+                          : 'text-brown-600 hover:text-honey-600'
                       }`}
                       onClick={() => {
                         setIsProductsOpen(false);
@@ -193,8 +193,8 @@ const Navbar = () => {
                         to={product.href}
                         className={`block transition-all duration-300 ${
                           isScrolled 
-                            ? 'text-gray-600 hover:text-secondary-600' 
-                            : 'text-gray-600 hover:text-secondary-600'
+                            ? 'text-brown-500 hover:text-honey-600' 
+                            : 'text-brown-600 hover:text-honey-600'
                         }`}
                         onClick={() => {
                           setIsProductsOpen(false);
@@ -210,9 +210,9 @@ const Navbar = () => {
               
               <Link to="/contact" className={`font-medium transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-gray-700 hover:text-secondary-600' 
-                  : 'text-gray-800 hover:text-secondary-600'
-              } ${location.pathname === '/contact' ? 'text-secondary-600' : ''}`}
+                  ? 'text-brown-600 hover:text-honey-600' 
+                  : 'text-brown-700 hover:text-honey-600'
+              } ${location.pathname === '/contact' ? 'text-honey-600' : ''}`}
               onClick={() => setIsOpen(false)}>
                 Contact
               </Link>

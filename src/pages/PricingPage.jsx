@@ -79,13 +79,13 @@ const PricingPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-12 md:py-20">
+      <section className="bg-warm-gradient py-12 md:py-20">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-brown-800 mb-6">
               Our <span className="text-gradient">Pricing</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-brown-600 max-w-3xl mx-auto">
               Transparent pricing for premium African food products. Quality ingredients, 
               authentic flavors, and competitive wholesale rates.
             </p>
@@ -94,16 +94,16 @@ const PricingPage = () => {
       </section>
 
       {/* ChinChin Pricing Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-cream-50">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <Package className="w-8 h-8 text-secondary-600 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <Package className="w-8 h-8 text-honey-600 mr-3" />
+              <h2 className="text-3xl md:text-4xl font-bold text-brown-800">
                 Premium ChinChin Packages
               </h2>
             </div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-brown-600 max-w-2xl mx-auto">
               Our signature product available now. Choose from different package sizes 
               to suit your needs.
             </p>
@@ -115,32 +115,32 @@ const PricingPage = () => {
                 key={index}
                 className={`relative rounded-3xl p-6 transition-all duration-300 hover:shadow-xl ${
                   packageItem.popular 
-                    ? 'bg-gradient-to-br from-secondary-50 to-earth-50 border-2 border-secondary-200 shadow-lg transform scale-105' 
-                    : 'bg-white border border-gray-200 shadow-md hover:border-secondary-200'
+                    ? 'bg-honey-50 border-2 border-honey-300 shadow-lg transform scale-105' 
+                    : 'bg-cream-50 border border-cream-300 shadow-md hover:border-honey-300'
                 }`}
               >
                 {packageItem.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-secondary-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <div className="bg-honey-600 text-brown-800 px-4 py-1 rounded-full text-sm font-semibold shadow-md">
                       Most Popular
                     </div>
                   </div>
                 )}
                 
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{packageItem.name}</h3>
+                  <h3 className="text-xl font-bold text-brown-800 mb-2">{packageItem.name}</h3>
                   <div className="mb-4">
-                    <span className="text-3xl font-bold text-secondary-600">{packageItem.price}</span>
+                    <span className="text-3xl font-bold text-honey-600">{packageItem.price}</span>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                    <p className="text-sm font-medium text-gray-700">{packageItem.quantity}</p>
+                  <div className="bg-cream-100 rounded-lg p-3 mb-4 border border-cream-200">
+                    <p className="text-sm font-medium text-brown-700">{packageItem.quantity}</p>
                   </div>
-                  <p className="text-gray-600 text-sm mb-6">{packageItem.description}</p>
+                  <p className="text-brown-600 text-sm mb-6">{packageItem.description}</p>
                   
                   <button className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
                     packageItem.popular
-                      ? 'bg-secondary-600 text-white hover:bg-secondary-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-secondary-50 hover:text-secondary-700'
+                      ? 'bg-honey-600 text-brown-800 hover:bg-honey-700 border-2 border-honey-600'
+                      : 'bg-cream-100 text-brown-700 hover:bg-honey-100 hover:text-brown-800 border-2 border-cream-300 hover:border-honey-400'
                   }`}>
                     Order Now
                   </button>
@@ -151,13 +151,13 @@ const PricingPage = () => {
 
           {/* Contact CTA for ChinChin */}
           <div className="mt-12 text-center">
-            <div className="bg-secondary-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Order Premium ChinChin?</h3>
-              <p className="text-gray-600 mb-6">Contact us directly to place your order and arrange delivery.</p>
+            <div className="bg-honey-50 rounded-2xl p-8 border border-honey-200">
+              <h3 className="text-2xl font-bold text-brown-800 mb-4">Ready to Order Premium ChinChin?</h3>
+              <p className="text-brown-600 mb-6">Contact us directly to place your order and arrange delivery.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+2349164778395"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-honey-600 text-brown-800 rounded-lg hover:bg-honey-700 transition-colors font-semibold shadow-md"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +234 916 477 8395
@@ -166,7 +166,7 @@ const PricingPage = () => {
                   href="https://wa.me/2349164778395"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-forest-600 text-white rounded-lg hover:bg-forest-700 transition-colors font-semibold shadow-md"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Order

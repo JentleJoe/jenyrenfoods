@@ -32,22 +32,22 @@ const About = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-br from-secondary-50 to-earth-50">
+    <section className="section-padding bg-gradient-to-br from-cream-50 to-honey-50">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div>
-            <div className="inline-flex items-center px-4 py-2 bg-secondary-100 rounded-full text-secondary-800 font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-honey-100 rounded-full text-honey-800 font-medium mb-6">
               <Heart className="w-4 h-4 mr-2" />
               Our Story
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-brown-900 mb-6">
               Preserving Tradition, 
               <span className="text-gradient block">Nourishing Lives</span>
             </h2>
             
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-brown-600 mb-8 leading-relaxed">
               At Jenyrenfoods, we believe that food is more than sustenance - it's a connection to our roots, 
               our culture, and our community. For over a decade, we've been dedicated to bringing you the 
               finest African food products, processed with care and love to preserve their natural goodness.
@@ -56,12 +56,12 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-secondary-600 rounded-full flex items-center justify-center flex-shrink-0 text-white">
+                  <div className="w-8 h-8 bg-honey-600 rounded-full flex items-center justify-center flex-shrink-0 text-white">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
-                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                    <h3 className="font-semibold text-brown-900 mb-1">{feature.title}</h3>
+                    <p className="text-brown-600 text-sm">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -87,8 +87,8 @@ const About = () => {
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-secondary-600">{stat.number}</div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
+                    <div className="text-2xl font-bold text-honey-600">{stat.number}</div>
+                    <div className="text-sm text-brown-600">{stat.label}</div>
                   </div>
                 ))}
               </div>

@@ -87,20 +87,20 @@ const ChinChinPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-8 md:py-16">
+      <section className="bg-warm-gradient py-8 md:py-16">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-accent-100 rounded-full text-accent-800 font-medium mb-6">
-                <Star className="w-4 h-4 mr-2" />
+              <div className="inline-flex items-center px-4 py-2 bg-honey-100 rounded-full text-brown-700 font-medium mb-6 border border-honey-200">
+                <Star className="w-4 h-4 mr-2 text-honey-600" />
                 Customer Favorite
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-brown-800 mb-6">
                 Premium <span className="text-gradient">ChinChin</span>
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-brown-600 mb-8 leading-relaxed">
                 Experience the authentic taste of West Africa with our signature ChinChin. 
                 Handcrafted using traditional methods and premium ingredients for that perfect 
                 golden crunch in every bite.
@@ -108,11 +108,11 @@ const ChinChinPage = () => {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex flex-col items-center text-center p-3 bg-white rounded-lg shadow-sm">
-                    <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 mb-2">
+                  <div key={index} className="flex flex-col items-center text-center p-3 bg-cream-50 rounded-lg shadow-sm border border-cream-200">
+                    <div className="w-8 h-8 bg-honey-100 rounded-full flex items-center justify-center text-honey-600 mb-2">
                       {feature.icon}
                     </div>
-                    <span className="text-xs text-gray-600">{feature.text}</span>
+                    <span className="text-xs text-brown-600">{feature.text}</span>
                   </div>
                 ))}
               </div>
@@ -125,9 +125,9 @@ const ChinChinPage = () => {
                   alt="Premium ChinChin"
                   className="w-full h-96 object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 shadow-lg">
+                <div className="absolute top-4 right-4 bg-cream-50 rounded-full px-3 py-1 shadow-lg border border-honey-200">
                   <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 fill-accent-400 text-accent-400" />
+                    <Star className="w-4 h-4 fill-honey-400 text-honey-400" />
                     <span className="text-sm font-medium">4.9/5</span>
                   </div>
                 </div>
@@ -138,13 +138,13 @@ const ChinChinPage = () => {
       </section>
 
       {/* Product Ordering Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-cream-50">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-secondary-50 to-earth-50 rounded-3xl p-8 md:p-12">
+            <div className="bg-honey-50 rounded-3xl p-8 md:p-12 border border-honey-200">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Choose Your Package</h2>
+                  <h2 className="text-3xl font-bold text-brown-800 mb-6">Choose Your Package</h2>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     {sizes.map((packageItem) => (
@@ -153,22 +153,22 @@ const ChinChinPage = () => {
                         onClick={() => setSelectedSize(packageItem.name)}
                         className={`relative p-4 rounded-xl border-2 transition-all text-left ${
                           selectedSize === packageItem.name
-                            ? 'border-secondary-500 bg-secondary-50'
-                            : 'border-gray-200 bg-white hover:border-secondary-300'
+                            ? 'border-honey-500 bg-honey-100'
+                            : 'border-cream-300 bg-cream-50 hover:border-honey-300'
                         }`}
                       >
                         {packageItem.popular && (
                           <div className="absolute -top-2 left-4">
-                            <span className="bg-accent-500 text-white text-xs px-3 py-1 rounded-full">
+                            <span className="bg-honey-500 text-white text-xs px-3 py-1 rounded-full">
                               Most Popular
                             </span>
                           </div>
                         )}
                         <div className="pt-2">
-                          <div className="font-bold text-gray-900 mb-1">{packageItem.name}</div>
-                          <div className="text-sm text-gray-600 mb-2">{packageItem.quantity}</div>
-                          <div className="text-secondary-600 font-bold text-lg">{packageItem.price}</div>
-                          <div className="text-xs text-gray-500 mt-1">{packageItem.description}</div>
+                          <div className="font-bold text-brown-800 mb-1">{packageItem.name}</div>
+                          <div className="text-sm text-brown-600 mb-2">{packageItem.quantity}</div>
+                          <div className="text-honey-600 font-bold text-lg">{packageItem.price}</div>
+                          <div className="text-xs text-brown-500 mt-1">{packageItem.description}</div>
                         </div>
                       </button>
                     ))}
@@ -191,8 +191,8 @@ const ChinChinPage = () => {
                       </a>
                     </div>
                     <div className="text-center">
-                      <p className="text-sm text-gray-600 mb-2">Alternative Contact:</p>
-                      <a href="tel:+2347082474369" className="text-secondary-600 hover:text-secondary-700 font-medium">
+                      <p className="text-sm text-brown-600 mb-2">Alternative Contact:</p>
+                      <a href="tel:+2347082474369" className="text-honey-600 hover:text-honey-700 font-medium">
                         +234 708 247 4369
                       </a>
                     </div>
@@ -204,34 +204,34 @@ const ChinChinPage = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">What&apos;s Included</h3>
+                  <h3 className="text-xl font-semibold text-brown-800 mb-4">What&apos;s Included</h3>
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center space-x-3">
-                      <Package className="w-5 h-5 text-secondary-600" />
-                      <span className="text-gray-700">Premium sealed packaging</span>
+                      <Package className="w-5 h-5 text-honey-600" />
+                      <span className="text-brown-700">Premium sealed packaging</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Truck className="w-5 h-5 text-secondary-600" />
-                      <span className="text-gray-700">Free delivery within Asaba</span>
+                      <Truck className="w-5 h-5 text-honey-600" />
+                      <span className="text-brown-700">Free delivery within Asaba</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Clock className="w-5 h-5 text-secondary-600" />
-                      <span className="text-gray-700">2-3 days nationwide delivery</span>
+                      <Clock className="w-5 h-5 text-honey-600" />
+                      <span className="text-brown-700">2-3 days nationwide delivery</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Shield className="w-5 h-5 text-secondary-600" />
-                      <span className="text-gray-700">Freshness guarantee</span>
+                      <Shield className="w-5 h-5 text-honey-600" />
+                      <span className="text-brown-700">Freshness guarantee</span>
                     </div>
                   </div>
                   
-                  <div className="bg-white rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-3">Nutrition Facts (per 100g)</h4>
+                  <div className="bg-cream-50 rounded-lg p-4 border border-cream-200">
+                    <h4 className="font-semibold text-brown-800 mb-3">Nutrition Facts (per 100g)</h4>
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       {nutritionFacts.map((fact, index) => (
                         <div key={index} className="flex justify-between">
-                          <span className="text-gray-600">{fact.label}:</span>
-                          <span className="font-medium">{fact.value}</span>
+                          <span className="text-brown-600">{fact.label}:</span>
+                          <span className="font-medium text-brown-700">{fact.value}</span>
                         </div>
                       ))}
                     </div>
@@ -244,13 +244,13 @@ const ChinChinPage = () => {
       </section>
 
       {/* How It&apos;s Made Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-cream-50">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
               Crafted with <span className="text-gradient">Tradition</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-brown-600 max-w-3xl mx-auto">
               Every piece of our ChinChin is made using time-honored techniques that have been 
               perfected over generations, ensuring authentic taste and superior quality.
             </p>
@@ -259,11 +259,11 @@ const ChinChinPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-secondary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-honey-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <h3 className="text-xl font-semibold text-brown-800 mb-3">{step.title}</h3>
+                <p className="text-brown-600">{step.description}</p>
               </div>
             ))}
           </div>
@@ -275,10 +275,10 @@ const ChinChinPage = () => {
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-6">
                 Pure, Natural <span className="text-gradient">Ingredients</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-brown-600 mb-8">
                 We believe in transparency. That&apos;s why we use only the finest, 
                 natural ingredients with no artificial preservatives or additives.
               </p>
@@ -286,8 +286,8 @@ const ChinChinPage = () => {
               <div className="space-y-3">
                 {ingredients.map((ingredient, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-secondary-600" />
-                    <span className="text-gray-700">{ingredient}</span>
+                    <Check className="w-5 h-5 text-honey-600" />
+                    <span className="text-brown-700">{ingredient}</span>
                   </div>
                 ))}
               </div>
@@ -307,26 +307,26 @@ const ChinChinPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-secondary-600 to-earth-600 text-white">
+      <section className="section-padding bg-gradient-to-br from-brown-500 to-brown-700 text-white">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Experience Premium ChinChin?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-95">
               Join thousands of satisfied customers who trust Jenyrenfoods for authentic, 
               high-quality African snacks delivered fresh to your door.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+2349164778395" className="bg-white text-secondary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center">
+              <a href="tel:+2349164778395" className="bg-cream-50 text-brown-700 px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-brown-800 transition-colors inline-flex items-center justify-center shadow-lg">
                 <Phone className="w-5 h-5 mr-2" />
                 Call: +234 916 477 8395
               </a>
-              <a href="tel:+2347082474369" className="bg-white text-secondary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center">
+              <a href="tel:+2347082474369" className="bg-cream-50 text-brown-700 px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-brown-800 transition-colors inline-flex items-center justify-center shadow-lg">
                 <Phone className="w-5 h-5 mr-2" />
                 Call: +234 708 247 4369
               </a>
-              <a href="mailto:jennykingsglobal2022@gmail.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary-600 transition-colors inline-flex items-center justify-center">
+              <a href="mailto:jennykingsglobal2022@gmail.com" className="border-2 border-cream-100 text-cream-50 px-6 py-3 rounded-lg font-medium hover:bg-cream-50 hover:text-brown-700 transition-colors inline-flex items-center justify-center">
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
               </a>
