@@ -9,11 +9,11 @@ const Navbar = () => {
   const location = useLocation();
 
   const products = [
-    { name: 'ChinChin', href: '/products#chinchin' },
-    { name: 'Plantain Flour', href: '/products#plantain-flour' },
-    { name: 'Beans Flour', href: '/products#beans-flour' },
-    { name: 'Soybean Powder', href: '/products#soybean-powder' },
-    { name: 'Tigernut Powder', href: '/products#tigernut-powder' },
+    { name: 'ChinChin', href: '/products/chinchin' },
+    { name: 'Plantain Flour', href: '/products/plantain-flour' },
+    { name: 'Beans Flour', href: '/products/beans-flour' },
+    { name: 'Soybean Powder', href: '/products/soybean-powder' },
+    { name: 'Tigernut Powder', href: '/products/tigernut-powder' },
   ];
 
   useEffect(() => {
@@ -87,14 +87,14 @@ const Navbar = () => {
                   </Link>
                   <div className="border-t border-gray-100 my-1"></div>
                   {products.map((product) => (
-                    <a
+                    <Link
                       key={product.name}
-                      href={product.href}
+                      to={product.href}
                       className="block px-4 py-2 text-gray-700 hover:bg-secondary-50 hover:text-secondary-600 transition-colors"
                       onClick={() => setIsProductsOpen(false)}
                     >
                       {product.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -180,9 +180,9 @@ const Navbar = () => {
                       All Products
                     </Link>
                     {products.map((product) => (
-                      <a
+                      <Link
                         key={product.name}
-                        href={product.href}
+                        to={product.href}
                         className={`block transition-colors ${
                           isScrolled 
                             ? 'text-gray-600 hover:text-secondary-600' 
@@ -194,7 +194,7 @@ const Navbar = () => {
                         }}
                       >
                         {product.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}

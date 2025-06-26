@@ -1,0 +1,315 @@
+import { useState } from 'react';
+import { Star, Heart, Truck, Shield, Award, ChefHat, Package, Phone, Mail, ArrowRight, Check, Clock, Leaf } from 'lucide-react';
+
+const ChinChinPage = () => {
+  const [selectedSize, setSelectedSize] = useState('500g');
+  const [quantity, setQuantity] = useState(1);
+
+  const sizes = [
+    { weight: '250g', price: '$8.99', popular: false },
+    { weight: '500g', price: '$12.99', popular: true },
+    { weight: '1kg', price: '$22.99', popular: false },
+    { weight: '2kg', price: '$39.99', popular: false }
+  ];
+
+  const features = [
+    { icon: <ChefHat className="w-5 h-5" />, text: 'Handcrafted with traditional methods' },
+    { icon: <Leaf className="w-5 h-5" />, text: 'Made with premium natural ingredients' },
+    { icon: <Shield className="w-5 h-5" />, text: 'Quality tested for freshness' },
+    { icon: <Award className="w-5 h-5" />, text: 'Customer favorite for 10+ years' }
+  ];
+
+  const nutritionFacts = [
+    { label: 'Calories', value: '450 per 100g' },
+    { label: 'Protein', value: '8g' },
+    { label: 'Carbohydrates', value: '65g' },
+    { label: 'Fat', value: '18g' },
+    { label: 'Fiber', value: '3g' },
+    { label: 'Sodium', value: '120mg' }
+  ];
+
+  const ingredients = [
+    'Premium wheat flour',
+    'Pure palm oil',
+    'Natural cane sugar',
+    'Sea salt',
+    'Fresh nutmeg',
+    'Natural flavoring'
+  ];
+
+  const steps = [
+    {
+      step: '1',
+      title: 'Premium Ingredient Selection',
+      description: 'We carefully select the finest wheat flour and natural ingredients for optimal taste and quality.'
+    },
+    {
+      step: '2',
+      title: 'Traditional Hand Mixing',
+      description: 'Our experienced artisans hand-mix the dough using time-honored techniques passed down through generations.'
+    },
+    {
+      step: '3',
+      title: 'Perfect Cutting & Shaping',
+      description: 'Each piece is carefully cut and shaped to ensure uniform cooking and that signature ChinChin texture.'
+    },
+    {
+      step: '4',
+      title: 'Golden Frying Process',
+      description: 'Fried to golden perfection in pure palm oil at precisely controlled temperatures for optimal crunch.'
+    }
+  ];
+
+  return (
+    <div className="pt-20">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-secondary-50 to-earth-50 py-16">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center px-4 py-2 bg-accent-100 rounded-full text-accent-800 font-medium mb-6">
+                <Star className="w-4 h-4 mr-2" />
+                Customer Favorite
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Premium <span className="text-gradient">ChinChin</span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Experience the authentic taste of West Africa with our signature ChinChin. 
+                Handcrafted using traditional methods and premium ingredients for that perfect 
+                golden crunch in every bite.
+              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex flex-col items-center text-center p-3 bg-white rounded-lg shadow-sm">
+                    <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 mb-2">
+                      {feature.icon}
+                    </div>
+                    <span className="text-xs text-gray-600">{feature.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+                  alt="Premium ChinChin"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 shadow-lg">
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 fill-accent-400 text-accent-400" />
+                    <span className="text-sm font-medium">4.9/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Ordering Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-secondary-50 to-earth-50 rounded-3xl p-8 md:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Choose Your Size</h2>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    {sizes.map((size) => (
+                      <button
+                        key={size.weight}
+                        onClick={() => setSelectedSize(size.weight)}
+                        className={`relative p-4 rounded-lg border-2 transition-all ${
+                          selectedSize === size.weight
+                            ? 'border-secondary-500 bg-secondary-50'
+                            : 'border-gray-200 bg-white hover:border-secondary-300'
+                        }`}
+                      >
+                        {size.popular && (
+                          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
+                            <span className="bg-accent-500 text-white text-xs px-2 py-1 rounded-full">
+                              Popular
+                            </span>
+                          </div>
+                        )}
+                        <div className="text-center">
+                          <div className="font-semibold text-gray-900">{size.weight}</div>
+                          <div className="text-secondary-600 font-bold">{size.price}</div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                  
+                  <div className="mb-6">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Quantity
+                    </label>
+                    <div className="flex items-center space-x-3">
+                      <button
+                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
+                      >
+                        -
+                      </button>
+                      <span className="text-lg font-medium w-8 text-center">{quantity}</span>
+                      <button
+                        onClick={() => setQuantity(quantity + 1)}
+                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <button className="w-full btn-primary text-lg py-4">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Call to Order: +2349164778395
+                    </button>
+                    <button className="w-full btn-secondary text-lg py-4">
+                      <Mail className="w-5 h-5 mr-2" />
+                      Email Us for Bulk Orders
+                    </button>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">What&apos;s Included</h3>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center space-x-3">
+                      <Package className="w-5 h-5 text-secondary-600" />
+                      <span className="text-gray-700">Premium sealed packaging</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Truck className="w-5 h-5 text-secondary-600" />
+                      <span className="text-gray-700">Free delivery within Asaba</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Clock className="w-5 h-5 text-secondary-600" />
+                      <span className="text-gray-700">2-3 days nationwide delivery</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Shield className="w-5 h-5 text-secondary-600" />
+                      <span className="text-gray-700">Freshness guarantee</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">Nutrition Facts (per 100g)</h4>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      {nutritionFacts.map((fact, index) => (
+                        <div key={index} className="flex justify-between">
+                          <span className="text-gray-600">{fact.label}:</span>
+                          <span className="font-medium">{fact.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It&apos;s Made Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Crafted with <span className="text-gradient">Tradition</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Every piece of our ChinChin is made using time-honored techniques that have been 
+              perfected over generations, ensuring authentic taste and superior quality.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-secondary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                  {step.step}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ingredients Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Pure, Natural <span className="text-gradient">Ingredients</span>
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                We believe in transparency. That&apos;s why we use only the finest, 
+                natural ingredients with no artificial preservatives or additives.
+              </p>
+              
+              <div className="space-y-3">
+                {ingredients.map((ingredient, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <Check className="w-5 h-5 text-secondary-600" />
+                    <span className="text-gray-700">{ingredient}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="rounded-3xl overflow-hidden shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1586825112956-136b76d0b5dd?auto=format&fit=crop&w=800&q=80"
+                  alt="Natural ingredients"
+                  className="w-full h-96 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-secondary-600 to-earth-600 text-white">
+        <div className="container-custom">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Experience Premium ChinChin?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+              Join thousands of satisfied customers who trust Jenyrenfoods for authentic, 
+              high-quality African snacks delivered fresh to your door.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-secondary-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: +2349164778395
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-secondary-600 transition-colors inline-flex items-center">
+                <Mail className="w-5 h-5 mr-2" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ChinChinPage;
