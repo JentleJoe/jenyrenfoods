@@ -1,4 +1,4 @@
-import { ArrowRight, Star, Zap, Heart, Leaf, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProductsGrid = () => {
@@ -10,7 +10,6 @@ const ProductsGrid = () => {
       description: 'Our signature ChinChin is a beloved West African snack, expertly crafted with premium ingredients for that perfect crunch and authentic taste.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
       benefits: ['Rich in carbohydrates', 'Perfect snack', 'Traditional recipe'],
-      icon: <Star className="w-6 h-6" />,
       color: 'from-accent-400 to-accent-600'
     },
     {
@@ -20,7 +19,6 @@ const ProductsGrid = () => {
       description: 'Made from carefully selected green plantains, our flour is a healthy gluten-free alternative packed with essential nutrients.',
       image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800',
       benefits: ['Gluten-free', 'High in fiber', 'Rich in potassium'],
-      icon: <Leaf className="w-6 h-6" />,
       color: 'from-secondary-400 to-secondary-600'
     },
     {
@@ -30,7 +28,6 @@ const ProductsGrid = () => {
       description: 'Our beans flour is a powerhouse of plant-based protein, perfect for making traditional dishes like moi-moi and akara.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
       benefits: ['High protein', 'Fiber-rich', 'Low glycemic index'],
-      icon: <Zap className="w-6 h-6" />,
       color: 'from-earth-400 to-earth-600'
     },
     {
@@ -40,7 +37,6 @@ const ProductsGrid = () => {
       description: 'Premium soybean powder that provides all essential amino acids, perfect for boosting the nutritional value of your meals.',
       image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800',
       benefits: ['Complete protein', 'Heart healthy', 'Versatile use'],
-      icon: <Heart className="w-6 h-6" />,
       color: 'from-primary-400 to-primary-600'
     },
     {
@@ -50,7 +46,6 @@ const ProductsGrid = () => {
       description: 'Ground from premium tigernuts, this powder is naturally sweet and packed with fiber, making it perfect for healthy beverages and snacks.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
       benefits: ['Naturally sweet', 'High in fiber', 'Dairy-free'],
-      icon: <Shield className="w-6 h-6" />,
       color: 'from-accent-500 to-earth-500'
     }
   ];
@@ -81,14 +76,9 @@ const ProductsGrid = () => {
                 />
                 {/* Product Title Overlay - positioned at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      {product.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{product.name}</h3>
-                      <p className="text-white/90">{product.tagline}</p>
-                    </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{product.name}</h3>
+                    <p className="text-white/90">{product.tagline}</p>
                   </div>
                 </div>
               </div>

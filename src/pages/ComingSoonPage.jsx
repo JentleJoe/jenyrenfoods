@@ -1,7 +1,7 @@
-import { Clock, Bell, ArrowLeft, Star, Leaf } from 'lucide-react';
+import { Clock, Bell, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const ComingSoonPage = ({ productName, productDescription, productIcon, estimatedDate = "Q2 2025" }) => {
+const ComingSoonPage = ({ productName, productDescription, estimatedDate = "Q2 2025" }) => {
   return (
     <div className="pt-20 min-h-screen bg-gradient-to-br from-secondary-50 to-earth-50">
       <div className="container-custom">
@@ -15,13 +15,6 @@ const ComingSoonPage = ({ productName, productDescription, productIcon, estimate
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to All Products
             </Link>
-          </div>
-
-          {/* Product Icon */}
-          <div className="w-24 h-24 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-8">
-            <div className="text-secondary-600">
-              {productIcon}
-            </div>
           </div>
 
           {/* Coming Soon Badge */}
@@ -52,8 +45,7 @@ const ComingSoonPage = ({ productName, productDescription, productIcon, estimate
                   perfecting the recipe and sourcing the finest ingredients to ensure 
                   exceptional quality.
                 </p>
-                <div className="inline-flex items-center text-secondary-600 font-medium">
-                  <Star className="w-4 h-4 mr-2" />
+                <div className="text-secondary-600 font-medium">
                   Expected Launch: {estimatedDate}
                 </div>
               </div>
@@ -101,7 +93,6 @@ const ComingSoonPage = ({ productName, productDescription, productIcon, estimate
               to="/products/chinchin" 
               className="inline-flex items-center px-6 py-3 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors"
             >
-              <Leaf className="w-4 h-4 mr-2" />
               Explore Premium ChinChin
             </Link>
           </div>
