@@ -296,9 +296,12 @@ const ChinChinPage = () => {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1586825112956-136b76d0b5dd?auto=format&fit=crop&w=800&q=80"
-                  alt="Natural ingredients"
+                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80"
+                  alt="Natural African food ingredients - wheat flour, palm oil, spices"
                   className="w-full h-96 object-cover"
+                  onError={(e) => {
+                    e.target.src = "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=80";
+                  }}
                 />
               </div>
             </div>
