@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 const ContactPage = () => {
   const contactInfo = [
@@ -61,109 +61,60 @@ const ContactPage = () => {
             ))}
           </div>
 
-          {/* Contact Form */}
+          {/* Direct Contact CTA */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-cream-50 to-honey-50 rounded-3xl p-8 md:p-12">
+            <div className="bg-gradient-to-br from-cream-50 to-honey-50 rounded-3xl p-8 md:p-12 border border-honey-200">
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-brown-900 mb-4">
-                  Send Us a Message
+                  Ready to Get in Touch?
                 </h2>
-                <p className="text-brown-600">
-                  Fill out the form below and we&apos;ll get back to you as soon as possible.
+                <p className="text-brown-600 text-lg">
+                  Choose your preferred method to contact us. We&apos;re here to help with all your African food needs!
                 </p>
               </div>
 
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-brown-700 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-honey-500 focus:border-transparent"
-                      placeholder="Your first name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-brown-700 mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-honey-500 focus:border-transparent"
-                      placeholder="Your last name"
-                    />
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a 
+                  href="tel:+2349164778395"
+                  className="bg-honey-500 text-white p-6 rounded-2xl hover:bg-honey-600 transition-colors text-center group"
+                >
+                  <Phone className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-semibold text-lg mb-2">Call Us Now</h3>
+                  <p className="text-sm opacity-90">+234 916 477 8395</p>
+                  <p className="text-xs opacity-75 mt-1">Instant response</p>
+                </a>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-brown-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-honey-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-brown-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-honey-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
+                <a 
+                  href="https://wa.me/2349164778395"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 text-white p-6 rounded-2xl hover:bg-green-600 transition-colors text-center group"
+                >
+                  <MessageCircle className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
+                  <p className="text-sm opacity-90">Chat with us</p>
+                  <p className="text-xs opacity-75 mt-1">Quick & convenient</p>
+                </a>
 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-brown-700 mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-honey-500 focus:border-transparent"
-                    placeholder="What is this regarding?"
-                  />
-                </div>
+                <a 
+                  href="mailto:jennykingsglobal2022@gmail.com"
+                  className="bg-brown-500 text-white p-6 rounded-2xl hover:bg-brown-600 transition-colors text-center group"
+                >
+                  <Mail className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-semibold text-lg mb-2">Email Us</h3>
+                  <p className="text-sm opacity-90">For detailed inquiries</p>
+                  <p className="text-xs opacity-75 mt-1">24h response time</p>
+                </a>
+              </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-brown-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-honey-500 focus:border-transparent"
-                    placeholder="Tell us more about your inquiry..."
-                  ></textarea>
-                </div>
-
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center px-8 py-3 bg-honey-600 text-white font-medium rounded-lg hover:bg-honey-700 transition-colors"
-                  >
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              <div className="mt-8 text-center">
+                <p className="text-brown-600 mb-4">
+                  <strong>Alternative contact:</strong> <a href="tel:+2347082474369" className="text-honey-600 hover:text-honey-700 font-medium">+234 708 247 4369</a>
+                </p>
+                <p className="text-sm text-brown-500">
+                  Business Hours: Monday - Saturday, 9:00 AM - 7:00 PM
+                </p>
+              </div>
             </div>
           </div>
         </div>
