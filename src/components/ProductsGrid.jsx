@@ -1,4 +1,5 @@
 import { ArrowRight, Star, Zap, Heart, Leaf, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProductsGrid = () => {
   const products = [
@@ -106,10 +107,10 @@ const ProductsGrid = () => {
                   ))}
                 </div>
                 
-                <button className="inline-flex items-center text-secondary-600 font-medium hover:text-secondary-700 transition-colors">
+                <Link to={`/products/${product.id}`} className="inline-flex items-center text-secondary-600 font-medium hover:text-secondary-700 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -125,12 +126,12 @@ const ProductsGrid = () => {
               Join thousands of satisfied customers who trust Jenyrenfoods for their authentic African food needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+              <Link to="/products" className="btn-primary">
                 View All Products
-              </button>
-              <button className="btn-secondary">
+              </Link>
+              <Link to="/contact" className="btn-secondary">
                 Get Price List
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { ArrowRight, Leaf, Award, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -36,13 +37,13 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 px-4">
-            <button className="btn-primary inline-flex items-center text-lg px-8 py-4">
+            <Link to="/products" className="btn-primary inline-flex items-center text-lg px-8 py-4">
               Explore Products
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-            <button className="btn-secondary text-lg px-8 py-4">
+            </Link>
+            <Link to="/contact" className="btn-secondary text-lg px-8 py-4">
               Get Price List
-            </button>
+            </Link>
           </div>
 
           {/* Stats */}

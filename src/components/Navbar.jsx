@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const products = [
-    { name: 'ChinChin', href: '#chinchin' },
-    { name: 'Plantain Flour', href: '#plantain-flour' },
-    { name: 'Beans Flour', href: '#beans-flour' },
-    { name: 'Soybean Powder', href: '#soybean-powder' },
-    { name: 'Tigernut Powder', href: '#tigernut-powder' },
+    { name: 'ChinChin', href: '/products#chinchin' },
+    { name: 'Plantain Flour', href: '/products#plantain-flour' },
+    { name: 'Beans Flour', href: '/products#beans-flour' },
+    { name: 'Soybean Powder', href: '/products#soybean-powder' },
+    { name: 'Tigernut Powder', href: '/products#tigernut-powder' },
   ];
 
   useEffect(() => {
@@ -37,20 +39,28 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-secondary-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-xl">J</span>
             </div>
-            <span className={`text-2xl font-bold transition-colors duration-300 ${
+            <Link to="/" className={`text-2xl font-bold transition-colors duration-300 ${
               isScrolled ? 'text-secondary-800' : 'text-white'
-            }`}>Jenyrenfoods</span>
+            }`}>Jenyrenfoods</Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className={`font-medium transition-colors duration-300 ${
+            <Link to="/" className={`font-medium transition-colors duration-300 ${
               isScrolled 
                 ? 'text-gray-700 hover:text-secondary-600' 
                 : 'text-white hover:text-secondary-200'
-            }`}>
+            } ${location.pathname === '/' ? 'text-secondary-600' : ''}`}>
               Home
-            </a>
+            </Link>
+            
+            <Link to="/pricing" className={`font-medium transition-colors duration-300 ${
+              isScrolled 
+                ? 'text-gray-700 hover:text-secondary-600' 
+                : 'text-white hover:text-secondary-200'
+            } ${location.pathname === '/pricing' ? 'text-secondary-600' : ''}`}>
+              Pricing
+            </Link>
             
             {/* Products Dropdown */}
             <div className="relative">
@@ -59,7 +69,7 @@ const Navbar = () => {
                   isScrolled 
                     ? 'text-gray-700 hover:text-secondary-600' 
                     : 'text-white hover:text-secondary-200'
-                }`}
+                } ${location.pathname === '/products' ? 'text-secondary-600' : ''}`}
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
               >
                 <span>Products</span>
@@ -68,6 +78,14 @@ const Navbar = () => {
               
               {isProductsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                  <Link
+                    to="/products"
+                    className="block px-4 py-2 text-gray-700 hover:bg-secondary-50 hover:text-secondary-600 transition-colors font-medium"
+                    onClick={() => setIsProductsOpen(false)}
+                  >
+                    All Products
+                  </Link>
+                  <div className="border-t border-gray-100 my-1"></div>
                   {products.map((product) => (
                     <a
                       key={product.name}
@@ -82,20 +100,13 @@ const Navbar = () => {
               )}
             </div>
             
-            <a href="#pricing" className={`font-medium transition-colors duration-300 ${
+            <Link to="/contact" className={`font-medium transition-colors duration-300 ${
               isScrolled 
                 ? 'text-gray-700 hover:text-secondary-600' 
                 : 'text-white hover:text-secondary-200'
-            }`}>
-              Pricing
-            </a>
-            <a href="#contact" className={`font-medium transition-colors duration-300 ${
-              isScrolled 
-                ? 'text-gray-700 hover:text-secondary-600' 
-                : 'text-white hover:text-secondary-200'
-            }`}>
-              Contact Us
-            </a>
+            } ${location.pathname === '/contact' ? 'text-secondary-600' : ''}`}>
+              Contact
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,13 +132,23 @@ const Navbar = () => {
             isScrolled ? 'border-gray-200 bg-white' : 'border-white/20 bg-white/95 backdrop-blur-md'
           }`}>
             <div className="flex flex-col space-y-4 px-4">
-              <a href="#home" className={`font-medium transition-colors ${
+              <Link to="/" className={`font-medium transition-colors ${
                 isScrolled 
                   ? 'text-gray-700 hover:text-secondary-600' 
                   : 'text-gray-800 hover:text-secondary-600'
-              }`}>
+              } ${location.pathname === '/' ? 'text-secondary-600' : ''}`}
+              onClick={() => setIsOpen(false)}>
                 Home
-              </a>
+              </Link>
+              
+              <Link to="/pricing" className={`font-medium transition-colors ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-secondary-600' 
+                  : 'text-gray-800 hover:text-secondary-600'
+              } ${location.pathname === '/pricing' ? 'text-secondary-600' : ''}`}
+              onClick={() => setIsOpen(false)}>
+                Pricing
+              </Link>
               
               <div>
                 <button
@@ -135,7 +156,7 @@ const Navbar = () => {
                     isScrolled 
                       ? 'text-gray-700 hover:text-secondary-600' 
                       : 'text-gray-800 hover:text-secondary-600'
-                  }`}
+                  } ${location.pathname === '/products' ? 'text-secondary-600' : ''}`}
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
                 >
                   <span>Products</span>
@@ -144,6 +165,20 @@ const Navbar = () => {
                 
                 {isProductsOpen && (
                   <div className="mt-2 ml-4 space-y-2">
+                    <Link
+                      to="/products"
+                      className={`block transition-colors font-medium ${
+                        isScrolled 
+                          ? 'text-gray-600 hover:text-secondary-600' 
+                          : 'text-gray-700 hover:text-secondary-600'
+                      }`}
+                      onClick={() => {
+                        setIsProductsOpen(false);
+                        setIsOpen(false);
+                      }}
+                    >
+                      All Products
+                    </Link>
                     {products.map((product) => (
                       <a
                         key={product.name}
@@ -165,20 +200,14 @@ const Navbar = () => {
                 )}
               </div>
               
-              <a href="#pricing" className={`font-medium transition-colors ${
+              <Link to="/contact" className={`font-medium transition-colors ${
                 isScrolled 
                   ? 'text-gray-700 hover:text-secondary-600' 
                   : 'text-gray-800 hover:text-secondary-600'
-              }`}>
-                Pricing
-              </a>
-              <a href="#contact" className={`font-medium transition-colors ${
-                isScrolled 
-                  ? 'text-gray-700 hover:text-secondary-600' 
-                  : 'text-gray-800 hover:text-secondary-600'
-              }`}>
-                Contact Us
-              </a>
+              } ${location.pathname === '/contact' ? 'text-secondary-600' : ''}`}
+              onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
             </div>
           </div>
         )}
