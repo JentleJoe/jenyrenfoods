@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Leaf } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin, Leaf } from 'lucide-react';
 
 const Footer = () => {
   const products = [
@@ -18,9 +18,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: '#', name: 'Facebook' },
-    { icon: <Instagram className="w-5 h-5" />, href: '#', name: 'Instagram' },
-    { icon: <Twitter className="w-5 h-5" />, href: '#', name: 'Twitter' }
+    { icon: <Facebook className="w-5 h-5" />, href: 'https://www.facebook.com/share/1LRK9jrtDR/?mibextid=LQQJ4d', name: 'Facebook' },
+    { icon: <Instagram className="w-5 h-5" />, href: 'https://www.facebook.com/share/1LRK9jrtDR/?mibextid=LQQJ4d', name: 'Instagram' }
   ];
 
   return (
@@ -45,6 +44,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary-600 transition-colors"
                   aria-label={social.name}
                 >

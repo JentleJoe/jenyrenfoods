@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import ProductsPage from './pages/ProductsPage';
 import PricingPage from './pages/PricingPage';
@@ -10,6 +11,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
