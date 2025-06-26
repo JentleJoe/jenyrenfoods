@@ -178,47 +178,47 @@ const PricingPage = () => {
       </section>
 
       {/* Other Organic Foods Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-cream-50">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <ShoppingCart className="w-8 h-8 text-secondary-600 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <ShoppingCart className="w-8 h-8 text-honey-600 mr-3" />
+              <h2 className="text-3xl md:text-4xl font-bold text-brown-800">
                 Other Premium Products Available
               </h2>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-brown-600 max-w-3xl mx-auto">
               Wholesale pricing for our complete range of organic African food products. 
               Perfect for retailers and bulk buyers.
             </p>
             
             {/* Wholesale Info Banner */}
-            <div className="mt-8 inline-flex items-center bg-blue-50 border border-blue-200 rounded-lg px-6 py-3">
-              <Info className="w-5 h-5 text-blue-600 mr-3" />
+            <div className="mt-8 inline-flex items-center bg-honey-50 border border-honey-200 rounded-lg px-6 py-3">
+              <Info className="w-5 h-5 text-honey-600 mr-3" />
               <div className="text-left">
-                <p className="text-blue-800 font-medium">Wholesale Pricing Information</p>
-                <p className="text-blue-600 text-sm">1 Carton = 12 packs | Half Carton = 6 packs</p>
+                <p className="text-brown-800 font-medium">Wholesale Pricing Information</p>
+                <p className="text-brown-600 text-sm">1 Carton = 12 packs | Half Carton = 6 packs</p>
               </div>
             </div>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {organicFoodsPricing.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-secondary-600 to-secondary-700 px-6 py-4">
+              <div key={categoryIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cream-200">
+                <div className="bg-brown-600 px-6 py-4">
                   <h3 className="text-xl font-bold text-white">{category.category}</h3>
                 </div>
                 <div className="p-6">
                   <div className="space-y-4">
                     {category.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="border-b border-gray-100 pb-4 last:border-b-0 last:pb-0">
+                      <div key={itemIndex} className="border-b border-cream-100 pb-4 last:border-b-0 last:pb-0">
                         <div className="flex justify-between items-start mb-2">
-                          <h4 className="font-semibold text-gray-900">{item.name}</h4>
-                          <span className="text-secondary-600 font-bold text-lg whitespace-nowrap ml-4">
+                          <h4 className="font-semibold text-brown-800">{item.name}</h4>
+                          <span className="text-honey-600 font-bold text-lg whitespace-nowrap ml-4">
                             {item.cartonPrice}
                           </span>
                         </div>
-                        <p className="text-sm text-gray-600">{item.note}</p>
+                        <p className="text-sm text-brown-600">{item.note}</p>
                       </div>
                     ))}
                   </div>
@@ -229,16 +229,16 @@ const PricingPage = () => {
 
           {/* Wholesale Contact Section */}
           <div className="mt-12">
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Interested in Wholesale Orders?</h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <div className="bg-cream-50 rounded-2xl shadow-lg p-8 text-center border border-honey-200">
+              <h3 className="text-2xl font-bold text-brown-800 mb-4">Interested in Wholesale Orders?</h3>
+              <p className="text-brown-600 mb-6 max-w-2xl mx-auto">
                 Get the best wholesale rates for bulk purchases. Contact our sales team for custom pricing, 
                 minimum order quantities, and delivery arrangements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+2347082474369"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-honey-500 text-white rounded-lg hover:bg-honey-600 transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +234 708 247 4369
@@ -254,7 +254,7 @@ const PricingPage = () => {
                 </a>
                 <a
                   href="mailto:jennykingsglobal2022@gmail.com"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-brown-600 text-white rounded-lg hover:bg-brown-700 transition-colors"
                 >
                   Email Inquiry
                 </a>
