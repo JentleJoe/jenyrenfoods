@@ -41,7 +41,7 @@ const Hero = () => {
               Explore Products
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link to="/contact" className="btn-secondary text-lg px-8 py-4">
+            <Link to="/pricing" className="btn-secondary text-lg px-8 py-4">
               Get Price List
             </Link>
           </div>

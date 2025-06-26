@@ -119,7 +119,7 @@ const ProductsGrid = () => {
               <Link to="/products" className="btn-primary">
                 View All Products
               </Link>
-              <Link to="/contact" className="btn-secondary">
+              <Link to="/pricing" className="btn-secondary">
                 Get Price List
               </Link>
             </div>
