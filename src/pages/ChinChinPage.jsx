@@ -1,15 +1,39 @@
 import { useState } from 'react';
-import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf } from 'lucide-react';
+import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf, MessageCircle } from 'lucide-react';
 
 const ChinChinPage = () => {
-  const [selectedSize, setSelectedSize] = useState('500g');
+  const [selectedSize, setSelectedSize] = useState('Medium Package');
   const [quantity, setQuantity] = useState(1);
 
   const sizes = [
-    { weight: '250g', price: '$8.99', popular: false },
-    { weight: '500g', price: '$12.99', popular: true },
-    { weight: '1kg', price: '$22.99', popular: false },
-    { weight: '2kg', price: '$39.99', popular: false }
+    { 
+      name: 'Mini Package', 
+      quantity: '24 Pieces', 
+      price: '₦6,500', 
+      popular: false,
+      description: 'Perfect for trying our premium ChinChin'
+    },
+    { 
+      name: 'Medium Package', 
+      quantity: '24 Pieces', 
+      price: '₦10,800', 
+      popular: true,
+      description: 'Great for families and regular enjoyment'
+    },
+    { 
+      name: 'Large Package', 
+      quantity: '24 Pieces', 
+      price: '₦21,600', 
+      popular: false,
+      description: 'Best value for ChinChin lovers'
+    },
+    { 
+      name: 'Family Size Package', 
+      quantity: '6 Pieces', 
+      price: '₦27,000', 
+      popular: false,
+      description: 'Perfect for large families and gatherings'
+    }
   ];
 
   const features = [
@@ -120,67 +144,61 @@ const ChinChinPage = () => {
             <div className="bg-gradient-to-r from-secondary-50 to-earth-50 rounded-3xl p-8 md:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Choose Your Size</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Choose Your Package</h2>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    {sizes.map((size) => (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    {sizes.map((packageItem) => (
                       <button
-                        key={size.weight}
-                        onClick={() => setSelectedSize(size.weight)}
-                        className={`relative p-4 rounded-lg border-2 transition-all ${
-                          selectedSize === size.weight
+                        key={packageItem.name}
+                        onClick={() => setSelectedSize(packageItem.name)}
+                        className={`relative p-4 rounded-xl border-2 transition-all text-left ${
+                          selectedSize === packageItem.name
                             ? 'border-secondary-500 bg-secondary-50'
                             : 'border-gray-200 bg-white hover:border-secondary-300'
                         }`}
                       >
-                        {size.popular && (
-                          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-                            <span className="bg-accent-500 text-white text-xs px-2 py-1 rounded-full">
-                              Popular
+                        {packageItem.popular && (
+                          <div className="absolute -top-2 left-4">
+                            <span className="bg-accent-500 text-white text-xs px-3 py-1 rounded-full">
+                              Most Popular
                             </span>
                           </div>
                         )}
-                        <div className="text-center">
-                          <div className="font-semibold text-gray-900">{size.weight}</div>
-                          <div className="text-secondary-600 font-bold">{size.price}</div>
+                        <div className="pt-2">
+                          <div className="font-bold text-gray-900 mb-1">{packageItem.name}</div>
+                          <div className="text-sm text-gray-600 mb-2">{packageItem.quantity}</div>
+                          <div className="text-secondary-600 font-bold text-lg">{packageItem.price}</div>
+                          <div className="text-xs text-gray-500 mt-1">{packageItem.description}</div>
                         </div>
                       </button>
                     ))}
                   </div>
                   
-                  <div className="mb-6">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Quantity
-                    </label>
-                    <div className="flex items-center space-x-3">
-                      <button
-                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <a href="tel:+2349164778395" className="btn-primary text-center py-3 inline-flex items-center justify-center">
+                        <Phone className="w-5 h-5 mr-2" />
+                        Call Now
+                      </a>
+                      <a 
+                        href="https://wa.me/2349164778395" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="btn-secondary text-center py-3 inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white border-green-600"
                       >
-                        -
-                      </button>
-                      <span className="text-lg font-medium w-8 text-center">{quantity}</span>
-                      <button
-                        onClick={() => setQuantity(quantity + 1)}
-                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
-                      >
-                        +
-                      </button>
+                        <MessageCircle className="w-5 h-5 mr-2" />
+                        WhatsApp
+                      </a>
                     </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <a href="tel:+2349164778395" className="w-full btn-primary text-lg py-4 inline-flex items-center justify-center">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Call: +234 916 477 8395
-                    </a>
-                    <a href="tel:+2347082474369" className="w-full btn-secondary text-lg py-4 inline-flex items-center justify-center">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Call: +234 708 247 4369
-                    </a>
-                    <a href="mailto:jennykingsglobal2022@gmail.com" className="w-full btn-secondary text-lg py-4 inline-flex items-center justify-center">
+                    <div className="text-center">
+                      <p className="text-sm text-gray-600 mb-2">Alternative Contact:</p>
+                      <a href="tel:+2347082474369" className="text-secondary-600 hover:text-secondary-700 font-medium">
+                        +234 708 247 4369
+                      </a>
+                    </div>
+                    <a href="mailto:jennykingsglobal2022@gmail.com" className="w-full btn-secondary text-center py-3 inline-flex items-center justify-center">
                       <Mail className="w-5 h-5 mr-2" />
-                      Email Us for Bulk Orders
+                      Email for Bulk Orders
                     </a>
                   </div>
                 </div>
