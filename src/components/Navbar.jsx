@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, Wheat } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-secondary-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">J</span>
+              <Wheat className="w-6 h-6 text-white" />
             </div>
             <Link to="/" className={`text-2xl font-bold transition-all duration-300 ${
               isScrolled 

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, Phone, MapPin, Leaf } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin, Wheat } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Official WhatsApp Logo Icon Component
@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-secondary-600 rounded-full flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-white" />
+                <Wheat className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold">Jenyrenfoods</span>
             </div>
