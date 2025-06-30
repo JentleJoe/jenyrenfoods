@@ -41,7 +41,7 @@ const ChinChinPage = () => {
     { icon: <ChefHat className="w-5 h-5" />, text: 'Handcrafted with traditional methods' },
     { icon: <Leaf className="w-5 h-5" />, text: 'Made with premium natural ingredients' },
     { icon: <Shield className="w-5 h-5" />, text: 'Quality tested for freshness' },
-    { icon: <Award className="w-5 h-5" />, text: 'Customer favorite for 10+ years' }
+    { icon: <Award className="w-5 h-5" />, text: 'Customer favorite for 2+ years' }
   ];
 
   const nutritionFacts = [
