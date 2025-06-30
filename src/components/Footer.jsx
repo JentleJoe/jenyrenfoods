@@ -172,14 +172,13 @@ const Footer = () => {
               © 2025 Jenyrenfoods. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
-                Cookie Policy
+              <a 
+                href="https://peakbrand.agency" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cream-300 hover:text-honey-300 text-sm transition-colors"
+              >
+                Built by peakbrand.agency
               </a>
             </div>
           </div>
