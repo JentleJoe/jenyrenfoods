@@ -17,7 +17,7 @@ const ProductsGrid = () => {
       name: 'Plantain Flour',
       tagline: 'Nature\'s Nutritious Flour',
       description: 'Made from carefully selected green plantains, our flour is a healthy gluten-free alternative packed with essential nutrients.',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://sc04.alicdn.com/kf/U5054f8d7355443c098a2b1984dd4c951x/ORGANIC-GREEN/YELLOW-BANANA-POWDER---BANANA-FRUIT-FLAVOUR--JUICE-FACTORY.jpg',
       benefits: ['Gluten-free', 'High in fiber', 'Rich in potassium'],
       color: 'from-cream-400 to-brown-500'
     },
@@ -26,7 +26,7 @@ const ProductsGrid = () => {
       name: 'Beans Flour',
       tagline: 'Protein-Rich Superfood',
       description: 'Our beans flour is a powerhouse of plant-based protein, perfect for making traditional dishes like moi-moi and akara.',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://i.pinimg.com/736x/b6/66/52/b6665228b8a9432251d83ededf599324.jpg',
       benefits: ['High protein', 'Fiber-rich', 'Low glycemic index'],
       color: 'from-brown-400 to-brown-600'
     },
@@ -35,7 +35,7 @@ const ProductsGrid = () => {
       name: 'Soybean Powder',
       tagline: 'Complete Protein Source',
       description: 'Premium soybean powder that provides all essential amino acids, perfect for boosting the nutritional value of your meals.',
-      image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://www.dragonkingfood.com/uploads/image/20220817/16/soybean-powder-products_1660724612.jpg',
       benefits: ['Complete protein', 'Heart healthy', 'Versatile use'],
       color: 'from-honey-400 to-honey-600'
     },
@@ -44,7 +44,7 @@ const ProductsGrid = () => {
       name: 'Tigernut Powder',
       tagline: 'Ancient Superfood',
       description: 'Ground from premium tigernuts, this powder is naturally sweet and packed with fiber, making it perfect for healthy beverages and snacks.',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://sun9-77.userapi.com/impg/tlT9c5cW10NJ6wGUq9SLNswrAshMKQ7uwBNLTw/hxzEsjMB_58.jpg?size=940x627&quality=95&sign=d8d140fe4ed2735070df8981127ad0dd&c_uniq_tag=HoKtAbXiIJKVA8ZDDJol-dZhKk9MozYun_nzMoAp23c&type=album',
       benefits: ['Naturally sweet', 'High in fiber', 'Dairy-free'],
       color: 'from-peach-500 to-brown-500'
     }
