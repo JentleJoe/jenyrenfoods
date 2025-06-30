@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import chinChinImage from '../assets/chinchin.png';
 
 const ProductsGrid = () => {
   const products = [
@@ -8,7 +9,7 @@ const ProductsGrid = () => {
       name: 'ChinChin',
       tagline: 'Crispy Traditional Delight',
       description: 'Our signature ChinChin is a beloved West African snack, expertly crafted with premium ingredients for that perfect crunch and authentic taste.',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: chinChinImage,
       benefits: ['Rich in carbohydrates', 'Perfect snack', 'Traditional recipe'],
       color: 'from-honey-400 to-honey-600'
     },

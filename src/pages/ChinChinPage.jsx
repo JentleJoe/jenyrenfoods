@@ -54,11 +54,14 @@ const ChinChinPage = () => {
 
   const ingredients = [
     'Premium wheat flour',
-    'Pure palm oil',
-    'Natural cane sugar',
-    'Sea salt',
+    'Fresh eggs',
+    'Pure butter/margarine',
+    'Granulated sugar',
+    'Powdered milk',
+    'Baking powder',
     'Fresh nutmeg',
-    'Natural flavoring'
+    'Salt',
+    'Vegetable oil for frying'
   ];
 
   const steps = [
@@ -80,7 +83,7 @@ const ChinChinPage = () => {
     {
       step: '4',
       title: 'Golden Frying Process',
-      description: 'Fried to golden perfection in pure palm oil at precisely controlled temperatures for optimal crunch.'
+      description: 'Fried to golden perfection in premium vegetable oil at precisely controlled temperatures for optimal crunch.'
     }
   ];
 

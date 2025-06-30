@@ -1,5 +1,6 @@
 import ProductsGrid from '../components/ProductsGrid';
 import { Star, Leaf, Zap, Heart, Shield } from 'lucide-react';
+import chinChinImage from '../assets/chinchin.png';
 
 const ProductsPage = () => {
   const productDetails = [
@@ -17,7 +18,7 @@ const ProductsPage = () => {
         fat: '18g'
       },
       icon: <Star className="w-8 h-8" />,
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: chinChinImage
     },
     {
       id: 'plantain-flour',
