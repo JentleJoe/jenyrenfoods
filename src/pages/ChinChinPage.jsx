@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf, MessageCircle } from 'lucide-react';
+import chinChinImage from '../assets/chinchin.png';
 
 const ChinChinPage = () => {
   const [selectedSize, setSelectedSize] = useState('Medium Package');
@@ -124,16 +125,10 @@ const ChinChinPage = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+                  src={chinChinImage}
                   alt="Premium ChinChin"
                   className="w-full h-96 object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-cream-50 rounded-full px-3 py-1 shadow-lg border border-honey-200">
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 fill-honey-400 text-honey-400" />
-                    <span className="text-sm font-medium">4.9/5</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

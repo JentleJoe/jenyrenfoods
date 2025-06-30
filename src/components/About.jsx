@@ -1,4 +1,5 @@
 import { CheckCircle, Award, Truck, Users, Leaf, Heart } from 'lucide-react';
+import whiteChinChinImage from '../assets/whitechinchin.png';
 
 const About = () => {
   const features = [
@@ -25,8 +26,8 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '10+', label: 'Years Experience' },
-    { number: '5000+', label: 'Happy Customers' },
+    { number: '2+', label: 'Years Experience' },
+    { number: '500+', label: 'Happy Customers' },
     { number: '100%', label: 'Natural Products' },
     { number: '24/7', label: 'Customer Support' }
   ];
@@ -76,8 +77,8 @@ const About = () => {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Fresh African produce"
+                src={whiteChinChinImage}
+                alt="Premium ChinChin - Fresh African produce"
                 className="w-full h-full object-cover"
               />
             </div>

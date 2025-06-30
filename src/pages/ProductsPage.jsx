@@ -7,10 +7,8 @@ const ProductsPage = () => {
     {
       id: 'chinchin',
       name: 'ChinChin',
-      price: '$12.99',
-      weight: '500g',
       description: 'Our signature ChinChin is a beloved West African snack, expertly crafted with premium ingredients for that perfect crunch and authentic taste.',
-      ingredients: ['Wheat flour', 'Palm oil', 'Sugar', 'Salt', 'Nutmeg'],
+      ingredients: ['Premium wheat flour', 'Fresh eggs', 'Pure butter/margarine', 'Granulated sugar', 'Powdered milk', 'Baking powder', 'Vegetable oil'],
       nutritionFacts: {
         calories: '450 per 100g',
         protein: '8g',
@@ -23,8 +21,6 @@ const ProductsPage = () => {
     {
       id: 'plantain-flour',
       name: 'Plantain Flour',
-      price: '$15.99',
-      weight: '1kg',
       description: 'Made from carefully selected green plantains, our flour is a healthy gluten-free alternative packed with essential nutrients.',
       ingredients: ['100% Green plantains'],
       nutritionFacts: {
@@ -39,8 +35,6 @@ const ProductsPage = () => {
     {
       id: 'beans-flour',
       name: 'Beans Flour',
-      price: '$18.99',
-      weight: '1kg',
       description: 'Our beans flour is a powerhouse of plant-based protein, perfect for making traditional dishes like moi-moi and akara.',
       ingredients: ['100% Black-eyed beans', 'Natural processing'],
       nutritionFacts: {
@@ -55,8 +49,6 @@ const ProductsPage = () => {
     {
       id: 'soybean-powder',
       name: 'Soybean Powder',
-      price: '$14.99',
-      weight: '500g',
       description: 'Premium soybean powder that provides all essential amino acids, perfect for boosting the nutritional value of your meals.',
       ingredients: ['100% Soybeans', 'No additives', 'Non-GMO'],
       nutritionFacts: {
@@ -71,8 +63,6 @@ const ProductsPage = () => {
     {
       id: 'tigernut-powder',
       name: 'Tigernut Powder',
-      price: '$16.99',
-      weight: '500g',
       description: 'Ground from premium tigernuts, this powder is naturally sweet and packed with fiber, making it perfect for healthy beverages and snacks.',
       ingredients: ['100% Tiger nuts', 'Naturally dried', 'Finely ground'],
       nutritionFacts: {
@@ -126,15 +116,8 @@ const ProductsPage = () => {
                   
                   <div className="p-8">
                     <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600">
-                        {product.icon}
-                      </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">{product.name}</h3>
-                        <div className="flex items-center space-x-4 text-sm text-gray-600">
-                          <span className="font-semibold text-secondary-600">{product.price}</span>
-                          <span>{product.weight}</span>
-                        </div>
                       </div>
                     </div>
                     

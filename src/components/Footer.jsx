@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
             <p className="text-cream-200 mb-6 leading-relaxed">
               Premium African food products crafted with tradition and care. 
-              Bringing authentic flavors to your table since 2010.
+              Bringing authentic flavors to your table since 2023.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -169,7 +169,7 @@ const Footer = () => {
         <div className="border-t border-brown-600 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-cream-300 text-sm">
-              © 2024 Jenyrenfoods. All rights reserved.
+              © 2025 Jenyrenfoods. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-cream-300 hover:text-honey-300 text-sm transition-colors">
