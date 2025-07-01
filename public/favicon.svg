@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="wheatGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a574;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b8860b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Wheat stem -->
+  <path d="M32 60 L32 20" stroke="url(#wheatGradient)" stroke-width="2" fill="none"/>
+  
+  <!-- Wheat grains -->
+  <ellipse cx="30" cy="22" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(-15 30 22)"/>
+  <ellipse cx="34" cy="22" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(15 34 22)"/>
+  
+  <ellipse cx="29" cy="26" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(-20 29 26)"/>
+  <ellipse cx="35" cy="26" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(20 35 26)"/>
+  
+  <ellipse cx="28" cy="30" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(-25 28 30)"/>
+  <ellipse cx="36" cy="30" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(25 36 30)"/>
+  
+  <ellipse cx="27" cy="34" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(-30 27 34)"/>
+  <ellipse cx="37" cy="34" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(30 37 34)"/>
+  
+  <ellipse cx="26" cy="38" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(-35 26 38)"/>
+  <ellipse cx="38" cy="38" rx="3" ry="6" fill="url(#wheatGradient)" transform="rotate(35 38 38)"/>
+  
+  <!-- Wheat awns (the bristles) -->
+  <path d="M26 16 L24 8" stroke="url(#wheatGradient)" stroke-width="1" fill="none"/>
+  <path d="M30 18 L28 10" stroke="url(#wheatGradient)" stroke-width="1" fill="none"/>
+  <path d="M32 18 L32 10" stroke="url(#wheatGradient)" stroke-width="1" fill="none"/>
+  <path d="M34 18 L36 10" stroke="url(#wheatGradient)" stroke-width="1" fill="none"/>
+  <path d="M38 16 L40 8" stroke="url(#wheatGradient)" stroke-width="1" fill="none"/>
+</svg>

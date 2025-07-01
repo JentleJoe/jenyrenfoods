@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <defs>
+    <linearGradient id="wheatGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a574;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b8860b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b4513;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fef7ed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f3e8d1;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background with gradient -->
+  <circle cx="90" cy="90" r="90" fill="url(#bgGradient)" stroke="#d4a574" stroke-width="3"/>
+  
+  <!-- Wheat stem -->
+  <path d="M90 155 L90 65" stroke="url(#wheatGradient)" stroke-width="6" fill="none"/>
+  
+  <!-- Wheat grains -->
+  <ellipse cx="82" cy="68" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(-15 82 68)"/>
+  <ellipse cx="98" cy="68" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(15 98 68)"/>
+  
+  <ellipse cx="78" cy="78" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(-20 78 78)"/>
+  <ellipse cx="102" cy="78" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(20 102 78)"/>
+  
+  <ellipse cx="74" cy="88" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(-25 74 88)"/>
+  <ellipse cx="106" cy="88" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(25 106 88)"/>
+  
+  <ellipse cx="70" cy="98" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(-30 70 98)"/>
+  <ellipse cx="110" cy="98" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(30 110 98)"/>
+  
+  <ellipse cx="66" cy="108" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(-35 66 108)"/>
+  <ellipse cx="114" cy="108" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(35 114 108)"/>
+  
+  <ellipse cx="62" cy="118" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(-40 62 118)"/>
+  <ellipse cx="118" cy="118" rx="8" ry="16" fill="url(#wheatGradient)" transform="rotate(40 118 118)"/>
+  
+  <!-- Wheat awns -->
+  <path d="M66 58 L60 35" stroke="url(#wheatGradient)" stroke-width="2" fill="none"/>
+  <path d="M78 62 L72 39" stroke="url(#wheatGradient)" stroke-width="2" fill="none"/>
+  <path d="M90 62 L90 39" stroke="url(#wheatGradient)" stroke-width="2" fill="none"/>
+  <path d="M102 62 L108 39" stroke="url(#wheatGradient)" stroke-width="2" fill="none"/>
+  <path d="M114 58 L120 35" stroke="url(#wheatGradient)" stroke-width="2" fill="none"/>
+</svg>

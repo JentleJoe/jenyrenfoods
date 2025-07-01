@@ -1,0 +1,42 @@
+{
+  "name": "Jenyrenfoods - Premium African Food Products",
+  "short_name": "Jenyrenfoods",
+  "description": "Premium African food products including ChinChin, Plantain Flour, and more. 100% natural ingredients with traditional methods.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fef7ed",
+  "theme_color": "#b8860b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.svg",
+      "sizes": "16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-32x32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-48x48.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "business", "shopping"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false
+}
