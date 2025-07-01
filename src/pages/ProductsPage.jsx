@@ -1,6 +1,10 @@
 import ProductsGrid from '../components/ProductsGrid';
 import { Star, Leaf, Zap, Heart, Shield } from 'lucide-react';
 import chinChinImage from '../assets/chinchin.png';
+import plantainFlourImage from '../assets/plantainFlour.png';
+import beansFlourV2 from '../assets/beansFlourV2.png'; // Updated image path
+import soybeanPowderImage from '../assets/soybeanPowder.png';
+import tigernutPowderImage from '../assets/tigernutPowder.png';
 
 const ProductsPage = () => {
   const productDetails = [
@@ -30,7 +34,7 @@ const ProductsPage = () => {
         fat: '1g'
       },
       icon: <Leaf className="w-8 h-8" />,
-      image: 'https://sc04.alicdn.com/kf/U5054f8d7355443c098a2b1984dd4c951x/ORGANIC-GREEN/YELLOW-BANANA-POWDER---BANANA-FRUIT-FLAVOUR--JUICE-FACTORY.jpg'
+      image: plantainFlourImage
     },
     {
       id: 'beans-flour',
@@ -44,7 +48,7 @@ const ProductsPage = () => {
         fat: '2g'
       },
       icon: <Zap className="w-8 h-8" />,
-      image: 'https://images.ctfassets.net/3s5io6mnxfqz/3FsymrBkU6b8501iYzUYZG/07c96a0f54887b72bd4317780a1254a8/AdobeStock_323308166.jpeg?w=1920'
+      image: beansFlourV2
     },
     {
       id: 'soybean-powder',
@@ -58,7 +62,7 @@ const ProductsPage = () => {
         fat: '20g'
       },
       icon: <Heart className="w-8 h-8" />,
-      image: 'https://www.dragonkingfood.com/uploads/image/20220817/16/soybean-powder-products_1660724612.jpg'
+      image: soybeanPowderImage
     },
     {
       id: 'tigernut-powder',
@@ -72,7 +76,7 @@ const ProductsPage = () => {
         fat: '9g'
       },
       icon: <Shield className="w-8 h-8" />,
-      image: 'https://sun9-77.userapi.com/impg/tlT9c5cW10NJ6wGUq9SLNswrAshMKQ7uwBNLTw/hxzEsjMB_58.jpg?size=940x627&quality=95&sign=d8d140fe4ed2735070df8981127ad0dd&c_uniq_tag=HoKtAbXiIJKVA8ZDDJol-dZhKk9MozYun_nzMoAp23c&type=album'
+      image: tigernutPowderImage
     }
   ];
 
