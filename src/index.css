@@ -19,11 +19,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-honey-500 text-brown-800 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-honey-600 hover:shadow-lg transform hover:-translate-y-1 border-2 border-honey-500 hover:border-honey-600;
+    @apply bg-honey-500 text-brown-800 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-honey-600 hover:shadow-lg transform hover:-translate-y-1 border-2 border-honey-500 hover:border-honey-600 active:scale-95;
   }
   
   .btn-secondary {
-    @apply bg-cream-100 text-brown-600 border-2 border-brown-400 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-cream-200 hover:border-brown-500 hover:shadow-lg transform hover:-translate-y-1;
+    @apply bg-cream-100 text-brown-600 border-2 border-brown-400 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-cream-200 hover:border-brown-500 hover:shadow-lg transform hover:-translate-y-1 active:scale-95;
   }
   
   .card {
@@ -71,4 +71,174 @@
   .animation-delay-600 {
     animation-delay: 600ms;
   }
+}
+
+/* Custom animations */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-indicator {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 164, 65, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(217, 164, 65, 0.2);
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 0.6s ease-out forwards;
+}
+
+.animate-scroll-indicator {
+  animation: scroll-indicator 1.5s ease-in-out infinite;
+}
+
+.animate-text-shimmer {
+  animation: text-shimmer 3s ease-in-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Interactive hover effects */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  @apply -translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(217, 164, 65, 0.3);
+}
+
+/* Focus visible styles for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-honey-500 focus-visible:ring-offset-2;
+}
+
+/* Smooth image loading */
+.img-loading {
+  @apply bg-cream-200 animate-pulse;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+/* Text selection */
+::selection {
+  background-color: rgba(217, 164, 65, 0.3);
+  color: #3D2F1F;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9A441;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C4932F;
 }
