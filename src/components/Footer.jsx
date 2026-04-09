@@ -135,8 +135,6 @@ const Footer = () => {
                         aria-label="Send WhatsApp message to Jenyrenfoods on +234 916 477 8395"
                       >
                         <WhatsAppIcon className="w-4 h-4" />
-                        <span className="text-xs">WhatsApp +234 916 477 8395</span>
-                        <span className="sr-only">WhatsApp +234 916 477 8395</span>
                       </a>
                     </div>
                     <div className="flex items-center space-x-2">
@@ -152,8 +150,6 @@ const Footer = () => {
                         aria-label="Send WhatsApp message to Jenyrenfoods on +234 708 247 4369"
                       >
                         <WhatsAppIcon className="w-4 h-4" />
-                        <span className="text-xs">WhatsApp +234 708 247 4369</span>
-                        <span className="sr-only">WhatsApp +234 708 247 4369</span>
                       </a>
                     </div>
                   </div>

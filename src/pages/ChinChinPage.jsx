@@ -177,7 +177,7 @@ const ChinChinPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <a href="tel:+2349164778395" className="btn-primary text-center py-3 inline-flex items-center justify-center" aria-label="Call to order ChinChin on +234 916 477 8395">
                         <Phone className="w-5 h-5 mr-2" />
-                        Call to Order ChinChin
+                        Call Now
                       </a>
                       <a 
                         href="https://wa.me/2349164778395" 
@@ -187,7 +187,7 @@ const ChinChinPage = () => {
                         aria-label="Chat on WhatsApp about ChinChin orders at +234 916 477 8395"
                       >
                         <MessageCircle className="w-5 h-5 mr-2" />
-                        WhatsApp ChinChin Orders
+                        WhatsApp
                       </a>
                     </div>
                     <div className="text-center">
