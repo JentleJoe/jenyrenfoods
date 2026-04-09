@@ -1,20 +1,6 @@
 import { Facebook, Instagram, Mail, Phone, MapPin, Wheat } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
-// Official WhatsApp Logo Icon Component
-const WhatsAppIcon = ({ className = "" }) => (
-  <svg 
-    className={className} 
-    viewBox="0 0 24 24" 
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path 
-      d="M12.012 2C6.48 2 2.002 6.478 2.002 12.011c0 1.77.459 3.527 1.334 5.068L2 22l5.06-1.327a9.958 9.958 0 0 0 4.952 1.316c5.532 0 10.01-4.478 10.01-10.011C22.022 6.478 17.544 2 12.012 2zm5.524 14.26c-.234.658-.896 1.207-1.459 1.352-.565.146-.88.146-2.542-.534-1.662-.68-4.055-3.101-5.717-5.419-.83-1.158-1.345-2.543-1.345-3.952 0-1.409.747-2.101 1.013-2.388.266-.288.581-.36.774-.36.193 0 .387.007.555.014.178.007.415-.068.652.497l.899 2.201c.096.193.161.415.032.652-.129.236-.193.385-.385.607-.193.222-.406.497-.58.668-.193.193-.394.401-.17.787.225.386 1.001 1.648 2.146 2.67 1.473 1.314 2.715 1.72 3.101 1.911.387.193.612.161.836-.096.225-.257.966-1.127 1.224-1.514.257-.386.514-.322.868-.193.354.129 2.24 1.056 2.627 1.249.387.193.645.289.741.451.096.161.096.934-.138 1.592z" 
-      fill="#25D366"
-    />
-  </svg>
-);
 
 const Footer = () => {
   const products = [
@@ -134,7 +120,7 @@ const Footer = () => {
                         title="Send WhatsApp message to +234 916 477 8395"
                         aria-label="Send WhatsApp message to Jenyrenfoods on +234 916 477 8395"
                       >
-                        <WhatsAppIcon className="w-4 h-4" />
+                        <FaWhatsapp className="w-4 h-4 text-[#25D366]" aria-hidden="true" />
                       </a>
                     </div>
                     <div className="flex items-center space-x-2">
@@ -149,7 +135,7 @@ const Footer = () => {
                         title="Send WhatsApp message to +234 708 247 4369"
                         aria-label="Send WhatsApp message to Jenyrenfoods on +234 708 247 4369"
                       >
-                        <WhatsAppIcon className="w-4 h-4" />
+                        <FaWhatsapp className="w-4 h-4 text-[#25D366]" aria-hidden="true" />
                       </a>
                     </div>
                   </div>

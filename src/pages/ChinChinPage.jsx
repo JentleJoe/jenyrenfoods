@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf, MessageCircle } from 'lucide-react';
+import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import chinChinImage from '../assets/chinchin.png';
 import recipeImage from '../assets/recipe.png';
 
@@ -186,7 +187,7 @@ const ChinChinPage = () => {
                         className="btn-secondary text-center py-3 inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white border-green-600"
                         aria-label="Chat on WhatsApp about ChinChin orders at +234 916 477 8395"
                       >
-                        <MessageCircle className="w-5 h-5 mr-2" />
+                        <FaWhatsapp className="w-5 h-5 mr-2 text-white" aria-hidden="true" />
                         WhatsApp
                       </a>
                     </div>

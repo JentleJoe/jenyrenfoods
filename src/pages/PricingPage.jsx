@@ -1,4 +1,5 @@
-import { Package, ShoppingCart, Info, Phone, MessageCircle } from 'lucide-react';
+import { Package, ShoppingCart, Info, Phone } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const PricingPage = () => {
   // ChinChin pricing data
@@ -168,7 +169,7 @@ const PricingPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-forest-600 text-white rounded-lg hover:bg-forest-700 transition-colors font-semibold shadow-md"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <FaWhatsapp className="w-5 h-5 mr-2 text-white" aria-hidden="true" />
                   WhatsApp Order
                 </a>
               </div>
@@ -249,7 +250,7 @@ const PricingPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <FaWhatsapp className="w-5 h-5 mr-2 text-white" aria-hidden="true" />
                   WhatsApp Wholesale
                 </a>
                 <a

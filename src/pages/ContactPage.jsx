@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import AnimatedSection from '../components/AnimatedSection';
 
 const ContactPage = () => {
@@ -96,7 +97,7 @@ const ContactPage = () => {
                     className="bg-green-500 text-white p-6 rounded-2xl hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 text-center group"
                     aria-label="Chat with Jenyrenfoods on WhatsApp at +234 916 477 8395"
                   >
-                    <MessageCircle className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 group-hover:rotate-12 transition-transform" />
+                    <FaWhatsapp className="w-8 h-8 mx-auto mb-3 text-white group-hover:scale-110 group-hover:rotate-12 transition-transform" aria-hidden="true" />
                     <h3 className="font-semibold text-lg mb-2">Chat on WhatsApp</h3>
                     <p className="text-sm opacity-90">Chat with us</p>
                     <p className="text-xs opacity-75 mt-1">Quick & convenient</p>
