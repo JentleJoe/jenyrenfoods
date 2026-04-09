@@ -66,7 +66,7 @@ const Hero = () => {
                     <Award className="w-6 h-6 text-brown-800 group-hover:rotate-12 transition-transform" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-brown-800 mb-1">Premium Quality</h3>
+                <h2 className="text-2xl font-bold text-brown-800 mb-1">Premium Quality</h2>
                 <p className="text-brown-600">Carefully selected ingredients</p>
               </div>
             </AnimatedSection>
@@ -78,7 +78,7 @@ const Hero = () => {
                     <Leaf className="w-6 h-6 text-forest-700 group-hover:rotate-12 transition-transform" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-brown-800 mb-1">100% Natural</h3>
+                <h2 className="text-2xl font-bold text-brown-800 mb-1">100% Natural</h2>
                 <p className="text-brown-600">No artificial additives</p>
               </div>
             </AnimatedSection>
@@ -90,7 +90,7 @@ const Hero = () => {
                     <Users className="w-6 h-6 text-brown-800 group-hover:rotate-12 transition-transform" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-brown-800 mb-1">Trusted Brand</h3>
+                <h2 className="text-2xl font-bold text-brown-800 mb-1">Trusted Brand</h2>
                 <p className="text-brown-600">Loved by thousands</p>
               </div>
             </AnimatedSection>
