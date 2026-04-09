@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block utility and private paths if introduced later
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://jenyrenfoods.com/sitemap.xml
