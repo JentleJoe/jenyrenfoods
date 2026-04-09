@@ -175,23 +175,24 @@ const ChinChinPage = () => {
                   
                   <div className="space-y-3">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <a href="tel:+2349164778395" className="btn-primary text-center py-3 inline-flex items-center justify-center">
+                      <a href="tel:+2349164778395" className="btn-primary text-center py-3 inline-flex items-center justify-center" aria-label="Call to order ChinChin on +234 916 477 8395">
                         <Phone className="w-5 h-5 mr-2" />
-                        Call Now
+                        Call to Order ChinChin
                       </a>
                       <a 
                         href="https://wa.me/2349164778395" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="btn-secondary text-center py-3 inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white border-green-600"
+                        aria-label="Chat on WhatsApp about ChinChin orders at +234 916 477 8395"
                       >
                         <MessageCircle className="w-5 h-5 mr-2" />
-                        WhatsApp
+                        WhatsApp ChinChin Orders
                       </a>
                     </div>
                     <div className="text-center">
                       <p className="text-sm text-brown-600 mb-2">Alternative Contact:</p>
-                      <a href="tel:+2347082474369" className="text-honey-600 hover:text-honey-700 font-medium">
+                      <a href="tel:+2347082474369" className="text-honey-600 hover:text-honey-700 font-medium" aria-label="Call alternative ChinChin order line +234 708 247 4369">
                         +234 708 247 4369
                       </a>
                     </div>
@@ -327,7 +328,7 @@ const ChinChinPage = () => {
               </a>
               <a href="mailto:jennykingsglobal2022@gmail.com" className="border-2 border-cream-100 text-cream-50 px-6 py-3 rounded-lg font-medium hover:bg-cream-50 hover:text-brown-700 transition-colors inline-flex items-center justify-center">
                 <Mail className="w-5 h-5 mr-2" />
-                Email Us
+                Email for ChinChin Orders
               </a>
             </div>
           </div>

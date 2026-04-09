@@ -120,7 +120,7 @@ const ProductsGrid = () => {
                       to={`/products/${product.id}`} 
                       className="inline-flex items-center text-honey-600 font-medium hover:text-honey-700 transition-colors group/link"
                     >
-                      Learn More
+                      Learn More About {product.name}
                       <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover/link:translate-x-2" />
                     </Link>
                   </div>

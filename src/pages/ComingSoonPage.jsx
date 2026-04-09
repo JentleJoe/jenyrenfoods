@@ -84,8 +84,9 @@ const ComingSoonPage = ({ productName, productDescription, estimatedDate = "Q2 2
               <a 
                 href="mailto:jennykingsglobal2022@gmail.com"
                 className="border-2 border-cream-100 text-cream-50 px-6 py-3 rounded-lg font-medium hover:bg-cream-50 hover:text-brown-700 transition-colors inline-flex items-center justify-center"
+                aria-label="Email Jenyrenfoods for product availability updates"
               >
-                Email Us
+                Email for Product Updates
               </a>
             </div>
           </div>

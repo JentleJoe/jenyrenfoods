@@ -63,8 +63,10 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-brown-600 rounded-full flex items-center justify-center hover:bg-honey-600 transition-colors shadow-md"
                   aria-label={social.name}
+                  title={social.name}
                 >
                   <span className="text-cream-100">{social.icon}</span>
+                  <span className="sr-only">{social.name}</span>
                 </a>
               ))}
             </div>
@@ -121,31 +123,37 @@ const Footer = () => {
                   <Phone className="w-5 h-5 text-honey-400 flex-shrink-0" />
                   <div className="flex flex-col space-y-1">
                     <div className="flex items-center space-x-2">
-                      <a href="tel:+2349164778395" className="text-cream-200 hover:text-honey-300 transition-colors">
+                      <a href="tel:+2349164778395" className="text-cream-200 hover:text-honey-300 transition-colors" aria-label="Call Jenyrenfoods on +234 916 477 8395">
                         +234 916 477 8395
                       </a>
                       <a 
                         href="https://wa.me/2349164778395" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="hover:opacity-80 transition-opacity ml-2"
-                        title="Send WhatsApp message"
+                        className="hover:opacity-80 transition-opacity ml-2 inline-flex items-center gap-1 text-cream-200 hover:text-honey-300"
+                        title="Send WhatsApp message to +234 916 477 8395"
+                        aria-label="Send WhatsApp message to Jenyrenfoods on +234 916 477 8395"
                       >
                         <WhatsAppIcon className="w-4 h-4" />
+                        <span className="text-xs">WhatsApp +234 916 477 8395</span>
+                        <span className="sr-only">WhatsApp +234 916 477 8395</span>
                       </a>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <a href="tel:+2347082474369" className="text-cream-200 hover:text-honey-300 transition-colors">
+                      <a href="tel:+2347082474369" className="text-cream-200 hover:text-honey-300 transition-colors" aria-label="Call Jenyrenfoods on +234 708 247 4369">
                         +234 708 247 4369
                       </a>
                       <a 
                         href="https://wa.me/2347082474369" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="hover:opacity-80 transition-opacity ml-2"
-                        title="Send WhatsApp message"
+                        className="hover:opacity-80 transition-opacity ml-2 inline-flex items-center gap-1 text-cream-200 hover:text-honey-300"
+                        title="Send WhatsApp message to +234 708 247 4369"
+                        aria-label="Send WhatsApp message to Jenyrenfoods on +234 708 247 4369"
                       >
                         <WhatsAppIcon className="w-4 h-4" />
+                        <span className="text-xs">WhatsApp +234 708 247 4369</span>
+                        <span className="sr-only">WhatsApp +234 708 247 4369</span>
                       </a>
                     </div>
                   </div>
@@ -157,6 +165,7 @@ const Footer = () => {
                 <a
                   href="mailto:jennykingsglobal2022@gmail.com"
                   className="text-cream-200 hover:text-honey-300 transition-colors"
+                  aria-label="Email Jenyrenfoods at jennykingsglobal2022@gmail.com"
                 >
                   jennykingsglobal2022@gmail.com
                 </a>

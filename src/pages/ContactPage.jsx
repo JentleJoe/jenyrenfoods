@@ -81,9 +81,10 @@ const ContactPage = () => {
                   <a 
                     href="tel:+2349164778395"
                     className="bg-honey-500 text-white p-6 rounded-2xl hover:bg-honey-600 hover:scale-105 hover:shadow-lg transition-all duration-300 text-center group"
+                    aria-label="Call Jenyrenfoods on +234 916 477 8395"
                   >
                     <Phone className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 group-hover:rotate-12 transition-transform" />
-                    <h3 className="font-semibold text-lg mb-2">Call Us Now</h3>
+                    <h3 className="font-semibold text-lg mb-2">Call Jenyrenfoods Sales</h3>
                     <p className="text-sm opacity-90">+234 916 477 8395</p>
                     <p className="text-xs opacity-75 mt-1">Instant response</p>
                   </a>
@@ -93,9 +94,10 @@ const ContactPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white p-6 rounded-2xl hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 text-center group"
+                    aria-label="Chat with Jenyrenfoods on WhatsApp at +234 916 477 8395"
                   >
                     <MessageCircle className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 group-hover:rotate-12 transition-transform" />
-                    <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
+                    <h3 className="font-semibold text-lg mb-2">Chat on WhatsApp</h3>
                     <p className="text-sm opacity-90">Chat with us</p>
                     <p className="text-xs opacity-75 mt-1">Quick & convenient</p>
                   </a>
@@ -103,9 +105,10 @@ const ContactPage = () => {
                   <a 
                     href="mailto:jennykingsglobal2022@gmail.com"
                     className="bg-brown-500 text-white p-6 rounded-2xl hover:bg-brown-600 hover:scale-105 hover:shadow-lg transition-all duration-300 text-center group"
+                    aria-label="Email Jenyrenfoods at jennykingsglobal2022@gmail.com"
                   >
                     <Mail className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 group-hover:rotate-12 transition-transform" />
-                    <h3 className="font-semibold text-lg mb-2">Email Us</h3>
+                    <h3 className="font-semibold text-lg mb-2">Email Jenyrenfoods</h3>
                     <p className="text-sm opacity-90">For detailed inquiries</p>
                     <p className="text-xs opacity-75 mt-1">24h response time</p>
                   </a>
@@ -113,7 +116,7 @@ const ContactPage = () => {
 
                 <div className="mt-8 text-center">
                   <p className="text-brown-600 mb-4">
-                    <strong>Alternative contact:</strong> <a href="tel:+2347082474369" className="text-honey-600 hover:text-honey-700 font-medium">+234 708 247 4369</a>
+                    <strong>Alternative contact:</strong> <a href="tel:+2347082474369" className="text-honey-600 hover:text-honey-700 font-medium" aria-label="Call Jenyrenfoods alternative number +234 708 247 4369">+234 708 247 4369</a>
                   </p>
                   <p className="text-sm text-brown-500">
                     Business Hours: Monday - Saturday, 9:00 AM - 7:00 PM
