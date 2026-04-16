@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
-import chinChinImage from '../assets/chinchin.png';
-import recipeImage from '../assets/recipe.png';
+import chinChinImage from '../assets/chinchin.jpg';
+import recipeImage from '../assets/recipe.jpg';
 
 const ChinChinPage = () => {
   const [selectedSize, setSelectedSize] = useState('Medium Package');

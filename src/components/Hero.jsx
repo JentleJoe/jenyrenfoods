@@ -1,6 +1,6 @@
 import { ArrowRight, Leaf, Award, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImg from '../assets/heroImg.png';
+import heroImg from '../assets/heroImg.jpg';
 import AnimatedSection from './AnimatedSection';
 import AnimatedCounter from './AnimatedCounter';
 

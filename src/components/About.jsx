@@ -1,5 +1,5 @@
 import { CheckCircle, Award, Truck, Users, Leaf, Heart } from 'lucide-react';
-import whiteChinChinImage from '../assets/whitechinchin.png';
+import whiteChinChinImage from '../assets/whitechinchin.jpg';
 import AnimatedSection from './AnimatedSection';
 import AnimatedCounter from './AnimatedCounter';
 

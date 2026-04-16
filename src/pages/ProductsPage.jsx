@@ -1,10 +1,10 @@
 import ProductsGrid from '../components/ProductsGrid';
 import { Star, Leaf, Zap, Heart, Shield } from 'lucide-react';
-import chinChinImage from '../assets/chinchin.png';
-import plantainFlourImage from '../assets/plantainFlour.png';
-import beansFlourV2 from '../assets/beansFlourV2.png'; // Updated image path
-import soybeanPowderImage from '../assets/soybeanPowder.png';
-import tigernutPowderImage from '../assets/tigernutPowder.png';
+import chinChinImage from '../assets/chinchin.jpg';
+import plantainFlourImage from '../assets/plantainFlour.jpg';
+import beansFlourV2 from '../assets/beansFlourV2.jpg'; // Updated image path
+import soybeanPowderImage from '../assets/soybeanPowder.jpg';
+import tigernutPowderImage from '../assets/tigernutPowder.jpg';
 
 const ProductsPage = () => {
   const productDetails = [

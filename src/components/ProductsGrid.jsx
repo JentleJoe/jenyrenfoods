@@ -1,10 +1,10 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import chinChinImage from '../assets/chinchin.png';
-import plantainFlourImage from '../assets/plantainFlour.png';
-import beansFlourImage from '../assets/beansFlour.png';
-import soybeanPowderImage from '../assets/soybeanPowder.png';
-import tigernutPowderImage from '../assets/tigernutPowder.png';
+import chinChinImage from '../assets/chinchin.jpg';
+import plantainFlourImage from '../assets/plantainFlour.jpg';
+import beansFlourImage from '../assets/beansFlour.jpg';
+import soybeanPowderImage from '../assets/soybeanPowder.jpg';
+import tigernutPowderImage from '../assets/tigernutPowder.jpg';
 import AnimatedSection from './AnimatedSection';
 import InteractiveCard from './InteractiveCard';
 
