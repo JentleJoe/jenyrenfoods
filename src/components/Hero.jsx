@@ -1,18 +1,22 @@
 import { ArrowRight, Leaf, Award, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImg from '../assets/heroImg.jpg';
+import heroImgPicture from '../assets/heroImg.jpg?w=640;960;1280;1600;1920;2500&format=avif;webp;jpg&as=picture';
 import AnimatedSection from './AnimatedSection';
 import AnimatedCounter from './AnimatedCounter';
+import OptimizedPicture from './OptimizedPicture';
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-warm-gradient pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImg}
+        <OptimizedPicture
+          picture={heroImgPicture}
           alt="Fresh organic produce"
+          sizes="100vw"
           className="w-full h-full object-cover opacity-15"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brown-700/10 to-honey-600/10"></div>
       </div>

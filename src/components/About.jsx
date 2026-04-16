@@ -1,7 +1,8 @@
 import { CheckCircle, Award, Truck, Users, Leaf, Heart } from 'lucide-react';
-import whiteChinChinImage from '../assets/whitechinchin.jpg';
+import whiteChinChinPicture from '../assets/whitechinchin.jpg?w=320;480;640;800;1000&format=avif;webp;jpg&as=picture';
 import AnimatedSection from './AnimatedSection';
 import AnimatedCounter from './AnimatedCounter';
+import OptimizedPicture from './OptimizedPicture';
 
 const About = () => {
   const features = [
@@ -91,11 +92,11 @@ const About = () => {
           <AnimatedSection animation="fade-left" delay={300}>
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl group">
-                <img
-                  src={whiteChinChinImage}
+                <OptimizedPicture
+                  picture={whiteChinChinPicture}
                   alt="Premium ChinChin - Fresh African produce"
+                  sizes="(min-width: 1280px) 608px, (min-width: 1024px) calc((100vw - 8rem) / 2), (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
                 />
                 {/* Image overlay on hover */}
                 <div className="absolute inset-0 bg-honey-500/0 group-hover:bg-honey-500/10 transition-colors duration-300" />

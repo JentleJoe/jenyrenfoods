@@ -1,12 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import chinChinImage from '../assets/chinchin.jpg';
-import plantainFlourImage from '../assets/plantainFlour.jpg';
-import beansFlourImage from '../assets/beansFlour.jpg';
-import soybeanPowderImage from '../assets/soybeanPowder.jpg';
-import tigernutPowderImage from '../assets/tigernutPowder.jpg';
+import chinChinImage from '../assets/chinchin.jpg?w=400;640;800;1024;1280;1600;2000&format=avif;webp;jpg&as=picture';
+import plantainFlourImage from '../assets/plantainFlour.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import beansFlourImage from '../assets/beansFlour.jpg?w=240;320;480;605&format=avif;webp;jpg&as=picture';
+import soybeanPowderImage from '../assets/soybeanPowder.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import tigernutPowderImage from '../assets/tigernutPowder.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
 import AnimatedSection from './AnimatedSection';
 import InteractiveCard from './InteractiveCard';
+import OptimizedPicture from './OptimizedPicture';
 
 const ProductsGrid = () => {
   const products = [
@@ -57,6 +58,9 @@ const ProductsGrid = () => {
     }
   ];
 
+  const featuredProductSizes = '(min-width: 1280px) 1280px, (min-width: 1024px) calc(100vw - 4rem), (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)';
+  const standardProductSizes = '(min-width: 1280px) 624px, (min-width: 1024px) calc((100vw - 6rem) / 2), (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)';
+
   return (
     <section className="section-padding bg-cream-100">
       <div className="container-custom">
@@ -83,11 +87,11 @@ const ProductsGrid = () => {
               <InteractiveCard className="h-full">
                 <div className="card group h-full">
                   <div className={`relative h-64 ${index === 0 ? 'lg:h-80' : ''} overflow-hidden`}>
-                    <img
-                      src={product.image}
+                    <OptimizedPicture
+                      picture={product.image}
                       alt={product.name}
+                      sizes={index === 0 ? featuredProductSizes : standardProductSizes}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
                     />
                     {/* Product Title Overlay - positioned at bottom */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 transform transition-transform duration-300">

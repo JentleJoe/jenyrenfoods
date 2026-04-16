@@ -1,10 +1,11 @@
 import ProductsGrid from '../components/ProductsGrid';
 import { Star, Leaf, Zap, Heart, Shield } from 'lucide-react';
-import chinChinImage from '../assets/chinchin.jpg';
-import plantainFlourImage from '../assets/plantainFlour.jpg';
-import beansFlourV2 from '../assets/beansFlourV2.jpg'; // Updated image path
-import soybeanPowderImage from '../assets/soybeanPowder.jpg';
-import tigernutPowderImage from '../assets/tigernutPowder.jpg';
+import chinChinImage from '../assets/chinchin.jpg?w=400;640;800;1024;1280;1600;2000&format=avif;webp;jpg&as=picture';
+import plantainFlourImage from '../assets/plantainFlour.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import beansFlourV2 from '../assets/beansFlourV2.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import soybeanPowderImage from '../assets/soybeanPowder.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import tigernutPowderImage from '../assets/tigernutPowder.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import OptimizedPicture from '../components/OptimizedPicture';
 
 const ProductsPage = () => {
   const productDetails = [
@@ -80,6 +81,8 @@ const ProductsPage = () => {
     }
   ];
 
+  const productDetailImageSizes = '(min-width: 1280px) 560px, (min-width: 1024px) calc((100vw - 10rem) / 2), (min-width: 640px) calc(100vw - 6rem), calc(100vw - 4rem)';
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -111,9 +114,10 @@ const ProductsPage = () => {
               <div key={product.id} className="bg-white rounded-3xl shadow-lg overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="relative h-64 lg:h-full">
-                    <img
-                      src={product.image}
+                    <OptimizedPicture
+                      picture={product.image}
                       alt={product.name}
+                      sizes={productDetailImageSizes}
                       className="w-full h-full object-cover"
                     />
                   </div>

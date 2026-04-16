@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Star, Truck, Shield, Award, ChefHat, Package, Phone, Mail, Check, Clock, Leaf } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
-import chinChinImage from '../assets/chinchin.jpg';
-import recipeImage from '../assets/recipe.jpg';
+import chinChinImage from '../assets/chinchin.jpg?w=400;640;800;1024;1280;1600;2000&format=avif;webp;jpg&as=picture';
+import recipeImage from '../assets/recipe.jpg?w=320;480;640;800;960;1200&format=avif;webp;jpg&as=picture';
+import OptimizedPicture from '../components/OptimizedPicture';
 
 const ChinChinPage = () => {
   const [selectedSize, setSelectedSize] = useState('Medium Package');
@@ -90,6 +91,9 @@ const ChinChinPage = () => {
     }
   ];
 
+  const heroImageSizes = '(min-width: 1280px) 616px, (min-width: 1024px) calc((100vw - 7rem) / 2), (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)';
+  const ingredientImageSizes = '(min-width: 1280px) 584px, (min-width: 1024px) calc((100vw - 11rem) / 2), (min-width: 640px) calc(100vw - 6rem), calc(100vw - 4rem)';
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -126,9 +130,10 @@ const ChinChinPage = () => {
             
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src={chinChinImage}
+                <OptimizedPicture
+                  picture={chinChinImage}
                   alt="Premium ChinChin"
+                  sizes={heroImageSizes}
                   className="w-full h-96 object-cover"
                 />
               </div>
@@ -296,9 +301,10 @@ const ChinChinPage = () => {
             
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-xl">
-                <img
-                  src={recipeImage}
+                <OptimizedPicture
+                  picture={recipeImage}
                   alt="Natural African food ingredients - wheat flour, eggs, butter, spices"
+                  sizes={ingredientImageSizes}
                   className="w-full h-96 object-cover"
                 />
               </div>
