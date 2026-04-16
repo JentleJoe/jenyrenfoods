@@ -1,5 +1,6 @@
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
 import InteractiveCard from './InteractiveCard';
 
@@ -92,12 +93,12 @@ const Testimonials = () => {
         {/* CTA */}
         <AnimatedSection animation="fade-up" delay={500} className="text-center mt-12">
           <p className="text-lg text-brown-600 mb-6">
-            Join thousands of satisfied customers who trust Jenyrenfoods
+            Need premium products at competitive prices for your home or business?
           </p>
-          <button className="btn-primary group">
-            Start Your Journey
-            <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
-          </button>
+          <Link to="/pricing" className="btn-primary group inline-flex items-center">
+            Get Pricing
+            <ArrowRight className="w-4 h-4 ml-2 inline transition-transform group-hover:translate-x-1" />
+          </Link>
         </AnimatedSection>
       </div>
     </section>

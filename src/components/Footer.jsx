@@ -164,7 +164,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a 
-                href="https://joshuaoseghale.vercel.app" 
+                href="https://joshuaoseghale.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-cream-300 hover:text-honey-300 text-sm transition-colors"
