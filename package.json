@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "prebuild": "node -e \"const fs = require('node:fs'); fs.rmSync('dist', { recursive: true, force: true });\"",
+    "build": "npm run build:client && npm run build:ssr && npm run prerender",
+    "build:client": "vite build --outDir dist/client",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --outDir dist/client"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
